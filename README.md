@@ -1,5 +1,6 @@
 # ELEC3609
-Timetable Sharing
+##Timetable Sharing
 
+**A MEAN based web application aimed at providing an easy to use way of comparing timetables**
 
-ayy lmao
+Note that this has been initially setup in Visual Studio. Should be more than usable on any platform.
