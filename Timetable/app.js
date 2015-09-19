@@ -46,10 +46,28 @@ var insertDocument = function (db, callback) {
     });
 };
 
+//Test a MongoDB query to find all restaurants
+
+var findRestaurants = function (db, callback) {
+    var cursor = db.collection('restaurants').find();
+    cursor.each(function (err, doc) {
+        if (doc != null) {
+            console.dir(doc);
+        } else {
+            callback();
+        }
+    });
+};
+
 //Mongo Test insert into restaurant database -- Example database to test MongoDB works
 MongoClient.connect(url, function (err, db) {
     assert.equal(null, err);
-    insertDocument(db, function () {
+    
+    //insertDocument(db, function () {
+    //    db.close();
+    //});
+    
+    findRestaurants(db, function () {
         db.close();
     });
     console.log("Connected correctly to server.");
