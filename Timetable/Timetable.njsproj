@@ -7,8 +7,7 @@
     <RootNamespace>Timetable</RootNamespace>
     <NodeExeArguments>
     </NodeExeArguments>
-    <DebuggerPort>
-    </DebuggerPort>
+    <DebuggerPort>5850</DebuggerPort>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
