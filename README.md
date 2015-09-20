@@ -6,3 +6,5 @@
 Note that this has been initially setup in Visual Studio. Should be usable on any platform. 
 
 **Testing to see if this has been initialised properly in Mac OS X**
+
+Yep - Working! Should be good to go regardless of platform guys!
