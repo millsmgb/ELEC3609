@@ -20,7 +20,7 @@ var insertDocument = function (db, callback) {
             "street" : "2 Avenue",
             "zipcode" : "10075",
             "building" : "1480",
-            "coord" : [-73.9557413, 40.7720266],
+            "coord" : [-73.9557413, 40.7720256],
             
         },
         "borough" : "Manhattan",
