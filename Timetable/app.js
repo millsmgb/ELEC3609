@@ -4,6 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+//ical conversion to json
+var ical2json = require("ical2json");
+ 
+//var output = ical2json.convert(icalData);
 
 //MongoDB connection
 
