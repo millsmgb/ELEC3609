@@ -50,11 +50,14 @@ app.use('/', routes);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
+/*
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
+
+*/
 
 // error handlers
 
@@ -90,4 +93,27 @@ var server = app.listen(3000, function () {
     var port = server.address().port;
     
     console.log('Example app listening at http://%s:%s', host, port);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+app.post('/icaldl', function(req,res){
+	console.log("INSIDE THE INDEX ROUTE FILE");
+	//console.log(req.body);
+	res.json({name: "cvid6070"});
+
+});
+
+
+
+	
+	
+	
+	
 });

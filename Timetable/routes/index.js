@@ -15,4 +15,47 @@ router.post('/', function (req, res) {
 });
 
 
+
+router.post('/icaldl', function(req,res){
+	console.log("INSIDE THE INDEX ROUTE FILE");
+	//console.log(req.body);
+	
+	var tablepath = req.body;
+	var http = require('https');
+	var fs = require('fs');
+	
+
+	var file = fs.createWriteStream("file.ics");
+	var request = http.get( tablepath.path,function(response) {
+	  response.pipe(file);
+	  console.log("************");
+	  
+	  
+	 // var jsonical = ical2json.convert(file);
+
+
+	});
+
+
+	
+	
+	
+	
+	
+	
+	res.json({name: "cvid6070"});
+	
+	
+
+});
+
+
+
+
+
+
+
+
+
+
 module.exports = router;

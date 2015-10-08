@@ -1,3 +1,4 @@
+//https://www.timetable.usyd.edu.au/personaltimetable/timetable/calendar/430436262/iDXEYtIqEBi1XyyLc9GZi7gQosPFggDiBv9M9FS7zgI/timetable.ics
 
 var myApp = angular.module('myApp', ['ngRoute'])
 	.config(['$routeProvider',function($routeProvider){
@@ -22,12 +23,11 @@ myApp.controller('AppCtrl', ['$scope', '$http','$location','$rootScope', functio
 $scope.processical = function(fileurl){
 
 	console.log("The button worked");
-	console.log(fileurl);
+	var file = {path: "https://www.timetable.usyd.edu.au/personaltimetable/timetable/calendar/430436262/iDXEYtIqEBi1XyyLc9GZi7gQosPFggDiBv9M9FS7zgI/timetable.ics"};
 	
-		$http.post('/icaldl',fileurl).success(function(response) {
-			console.log("8888888888");
-			console.log(response);
-  });
+	console.log(file);
+	
+	$http.post('/icaldl',file);
 
 
 }
