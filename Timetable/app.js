@@ -18,64 +18,13 @@ var url = 'mongodb://localhost:27017/test';
 
 //Test insert into connected MongoDB collection
 
-var insertDocument = function (db, callback) {
-    db.collection('restaurants').insertOne({
-        "address" : {
-            "street" : "2 Avenue",
-            "zipcode" : "10075",
-            "building" : "1480",
-            "coord" : [-73.9557413, 40.7720256],
-            
-        },
-        "borough" : "Manhattan",
-        "cuisine" : "Italian",
-        "grades" : [
-            {
-                "date" : new Date("2014-10-01T00:00:00Z"),
-                "grade" : "A",
-                "score" : 11
-            },
-            {
-                "date" : new Date("2014-01-16T00:00:00Z"),
-                "grade" : "B",
-                "score" : 17
-            }
-        ],
-        "name" : "Vella",
-        "restaurant_id" : "41704620"
-    }, function (err, result) {
-        assert.equal(err, null);
-        console.log("Inserted a document into the restaurants collection");
-        callback(result);
-    });
-};
 
 //Test a MongoDB query to find all restaurants
 
-var findRestaurants = function (db, callback) {
-    var cursor = db.collection('restaurants').find();
-    cursor.each(function (err, doc) {
-        if (doc != null) {
-            console.dir(doc);
-        } else {
-            callback();
-        }
-    });
-};
+
 
 //Mongo Test insert into restaurant database -- Example database to test MongoDB works
-MongoClient.connect(url, function (err, db) {
-    assert.equal(null, err);
-    
-    //insertDocument(db, function () {
-    //    db.close();
-    //});
-    
-    findRestaurants(db, function () {
-        db.close();
-    });
-    console.log("Connected correctly to server.");
-});
+
 
 //Establishing appropriate routes - currently in Jade format
 
@@ -86,7 +35,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -111,6 +60,7 @@ app.use(function (req, res, next) {
 
 // development error handler
 // will print stacktrace
+/*
 if (app.get('env') === 'development') {
     app.use(function (err, req, res, next) {
         res.status(err.status || 500);
@@ -130,7 +80,7 @@ app.use(function (err, req, res, next) {
         error: {}
     });
 });
-
+*/
 console.log('This is here');
 
 module.exports = app;

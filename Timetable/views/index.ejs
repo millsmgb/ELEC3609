@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app ="myApp" ng-controller="AppCtrl">
+
+<head>
+
+
+    <title>Timetable Management System</title>	
+	
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="navbar topbar">
+
+	    <h1 id="title"> Timetable Management System </h1> 
+			<a href ="#groups"> groups tab    </a>
+			<a href ="#upload">    upload tab </a>
+
+	</div>
+		
+		
+	<div class = "outerborder">
+		<ng-view> </ng-view>
+
+	</div>
+
+	
+	
+	
+	    
+	<!-- angular related -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script>
+	<script src="controllers/controller.js"></script>
+
+
+
+</body>
+
+</html>
