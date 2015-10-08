@@ -1,6 +1,7 @@
 ﻿var express = require('express');
 var router = express.Router();
 var ical2json = require("ical2json");
+var Timetable  = require('../models/timetable');
 
 /* GET home page. */
 router.get('/', function (req, res) {
@@ -23,17 +24,33 @@ router.post('/icaldl', function(req,res){
 	var tablepath = req.body;
 	var http = require('https');
 	var fs = require('fs');
-	
+	var output;
 
 	var file = fs.createWriteStream("file.ics");
 	var request = http.get( tablepath.path,function(response) {
-	  response.pipe(file);
-	  console.log("************");
-	  
-	  
-	 // var jsonical = ical2json.convert(file);
 
+		response.pipe(file);
+		
+		fs.readFile('file.ics', 'utf8', function (err,data) {
+		  if (err) {
+			return console.log(err);
+		  }
+		  
+		  output = ical2json.convert(data);
+		});
 
+		
+		var insert = new Timetable(output);
+		
+		insert.save(function(err, user_Saved){
+			if(err){
+				throw err;
+				console.log(err);
+			}else{
+				console.log('insertet the ical');
+			}
+	});
+	   console.log("************");
 	});
 
 

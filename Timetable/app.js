@@ -6,6 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 //ical conversion to json
 var ical2json = require("ical2json");
+var mongoose = require('mongoose');
+var db = mongoose.connection;
+
  
 //var output = ical2json.convert(icalData);
 
@@ -13,8 +16,37 @@ var ical2json = require("ical2json");
 
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
+mongoose.connect('mongodb://localhost/tms');
+var db = mongoose.connection;
 
-var url = 'mongodb://localhost:27017/test';
+// this will test the connection of mongoose to the database
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+  console.log("CONNECTION WORKS!!");
+  
+  var kittySchema = mongoose.Schema({
+    name: String
+	});
+	var Kitten = mongoose.model('Kitten', kittySchema);
+	var silence = new Kitten({ name: 'Silence' });
+
+// this is a test insert
+	silence.save(function(err, user_Saved){
+		if(err){
+			throw err;
+			console.log(err);
+		}else{
+			console.log('saved!');
+		}
+	});
+
+  
+});
+
+
+
+
+//var url = 'mongodb://localhost:27017/testdb';
 
 //Test insert into connected MongoDB collection
 
