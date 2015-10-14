@@ -20,6 +20,7 @@ myApp.controller('AppCtrl', ['$scope', '$http','$location','$rootScope', functio
 
 
 
+
 $scope.processical = function(fileurl){
 
 	console.log("The button worked");
@@ -27,7 +28,22 @@ $scope.processical = function(fileurl){
 	
 	console.log(file);
 	
-	$http.post('/icaldl',file);
+	
+	
+$http.post('/icaldl',file).success(function(response){ // ask server through this route
+			console.log("SUCCESS , i got back a json"); // print to console
+			console.log(response+"###");
+
+
+		}) ;
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 }

@@ -3,9 +3,16 @@ var mongoose = require('mongoose');
 
 // define the schema for our post model
 var timetableSchema = mongoose.Schema({
-    comment : String,
-	upvotes: Number,
-	author: String
+    sid : String,
+	times : [{
+				Summary : String,
+				Start : Number,
+				End :   Number,
+				Day:    String
+			}]
+	
+	
+	,
 });
 
 
