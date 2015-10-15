@@ -86,30 +86,44 @@ function isLoggedIn(req, res, next) {
 	// HERE GOES THE TIMETABLE FUNCTIONS
 	
 	app.post('/icaldl', function(req,res,next){
-	
-	
 		console.log("inside the icalroute");
+		//createjson(req.body)
+	
+	var cont = false;
+	console.log("CONT IS "+ cont);
+	
+
+	cont =	createjson(req.body);
+		
+		
+		console.log("about to res!!!!!!!!!!!!!!!");
+		
+		while(cont== false){};
+		
+		
+		
+		res.json("comeback");
+
+	});
+	
+
+	var createjson = function(path){
+		console.log("insidecreatejason");
 		//variables to get the contents from the server. 
-<<<<<<< HEAD
 		var jsontable;
 		var tablepath = path;
-=======
-		var tablepath = req.body;
->>>>>>> 939012de5e230b88c809dd47542b74e80fde8bc4
 		var cont2 = false;
 		var http = require('https');
 		var fs = require('fs');
 		var file = fs.createWriteStream("file.ics");
-		var cont = false;
-	
 
-			var request = http.get( tablepath.path,function(response) {
-			var test;
+		// GET FILE FROM LINK
+		var request = http.get( tablepath.path,function(response) {
 			// write the content to a file
 			response.pipe(file);
 			console.log("just piped the file")
+			// WHY IS THE FILE NOT ALL HERE!?!?!?!?!?!!?!?!?!?!?!?!?!
 			
-<<<<<<< HEAD
 			
 			
 			fs.readFile('file.ics', 'utf8', function (err,data) {
@@ -129,22 +143,16 @@ function isLoggedIn(req, res, next) {
 			
 			jsontable = JSON.stringify(jsontable, undefined, 2);
 
-			
-			//console.log(jsontable);		
+			console.log(jsontable);		
 			//while(cont2== false){console.log("&&&")};
 			
 		//console.log(data+"***");
+
 		});
 		
-		
-		
-		
-		console.log("about to res!!!!!!!!!!!!!!!");
-		res.json("comeback");
 
-	});
-	
-
+		return true;
+	};
 
 	
 
