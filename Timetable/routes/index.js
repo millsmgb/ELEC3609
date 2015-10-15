@@ -86,71 +86,36 @@ function isLoggedIn(req, res, next) {
 	// HERE GOES THE TIMETABLE FUNCTIONS
 	
 	app.post('/icaldl', function(req,res,next){
-		console.log("inside the icalroute");
-		//createjson(req.body)
 	
-	var cont = false;
-	console.log("CONT IS "+ cont);
+	
+		console.log("inside the icalroute");
+		//variables to get the contents from the server. 
+		var tablepath = req.body;
+		var cont2 = false;
+		var http = require('https');
+		var fs = require('fs');
+		var file = fs.createWriteStream("file.ics");
+		var cont = false;
 	
 
-	cont =	createjson(req.body);
+			var request = http.get( tablepath.path,function(response) {
+			var test;
+			// write the content to a file
+			response.pipe(file);
+			console.log("just piped the file")
+			
+
+		});
+		
+		
 		
 		
 		console.log("about to res!!!!!!!!!!!!!!!");
-		
-		while(cont== false){};
-		
-		
-		
 		res.json("comeback");
 
 	});
 	
 
-	var createjson = function(path){
-		console.log("insidecreatejason");
-		//variables to get the contents from the server. 
-		var tablepath = path;
-		var cont2 = false;
-		var http = require('https');
-		var fs = require('fs');
-		var file = fs.createWriteStream("file.ics");
-
-		// GET FILE FROM LINK
-		var request = http.get( tablepath.path,function(response) {
-			// write the content to a file
-			response.pipe(file);
-			console.log("just piped the file")
-			// WHY IS THE FILE NOT ALL HERE!?!?!?!?!?!!?!?!?!?!?!?!?!
-			
-			
-			
-			fs.readFile('file.ics', 'utf8', function (err,data) {
-			  if (err) {
-				return console.log(err);
-			  }
-			  // convert the date in the text file to json
-			  jsontable  = ical2json.convert(data);
-					console.log("%%%%%%%%%%%%%%");
-					console.log(jsontable);
-				  cont2 = true;
-				  console.log("YOU MAY PASS");
-
-
-			});
-			
-			
-			
-		
-			while(cont2== false){console.log("&&&")};
-			
-		//console.log(data+"***");
-
-		});
-		
-
-		return true;
-	};
 
 	
 
