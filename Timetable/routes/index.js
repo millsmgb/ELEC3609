@@ -110,6 +110,7 @@ function isLoggedIn(req, res, next) {
 	var createjson = function(path){
 		console.log("insidecreatejason");
 		//variables to get the contents from the server. 
+		var jsontable;
 		var tablepath = path;
 		var cont2 = false;
 		var http = require('https');
@@ -140,9 +141,11 @@ function isLoggedIn(req, res, next) {
 			});
 			
 			
+			jsontable = JSON.stringify(jsontable, undefined, 2);
+
 			
-		
-			while(cont2== false){console.log("&&&")};
+			//console.log(jsontable);		
+			//while(cont2== false){console.log("&&&")};
 			
 		//console.log(data+"***");
 
