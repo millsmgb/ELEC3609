@@ -1,0 +1,813 @@
+{
+  "VCALENDAR": [
+    {
+      "VERSION": "2.0",
+      "PRODID": "-//University of Sydney/Personal timetable//en",
+      "CALSCALE": "GREGORIAN",
+      "DESCRIPTION": "Your timetable for The University of Sydney.",
+      "NAME": "Student Timetable",
+      "REFRESH-INTERVAL": "PT2H",
+      "TIMEZONE-ID": "Australia/Sydney",
+      "X-PUBLISHED-TTL": "PT2H",
+      "X-WR-CALDESC": "Your timetable for The University of Sydney.",
+      "X-WR-CALNAME": "Student Timetable",
+      "X-WR-TIMEZONE": "Australia/Sydney",
+      "VTIMEZONE": [
+        {
+          "TZID": "Australia/Sydney",
+          "X-LIC-LOCATION": "Australia/Sydney",
+          "STANDARD": [
+            {
+              "DTSTART;VALUE=DATE-TIME": "20140406T030000",
+              "RRULE": "FREQ=YEARLY;BYDAY=1SU;BYMONTH=4",
+              "TZNAME": "AEST",
+              "TZOFFSETFROM": "+1100",
+              "TZOFFSETTO": "+1000"
+            }
+          ],
+          "DAYLIGHT": [
+            {
+              "DTSTART;VALUE=DATE-TIME": "20141005T020000",
+              "RRULE": "FREQ=YEARLY;BYDAY=1SU;BYMONTH=10",
+              "TZNAME": "ADST",
+              "TZOFFSETFROM": "+1000",
+              "TZOFFSETTO": "+1100"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "VEVENT": [
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150727T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150727T120000",
+      "UID": "db09a6d15d7b8df975671d6b5bc117ec18313d3b1d2e90a900d694dac2a559d1",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150803T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150803T120000",
+      "UID": "74e4f4fb420b8546a3629735b9b89ca420cec586290fda2711b421426fb403bf",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150810T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150810T120000",
+      "UID": "b4451c119695d2f2bb27217e810d7a04b1137ea6109a07fdf307378921ba2a65",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150817T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150817T120000",
+      "UID": "23a59ef77e54ff1042c342c1990b824731a5fe267b45c73e0f6eb2e95b254160",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150824T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150824T120000",
+      "UID": "35e471c525d154214b7b62f2d61cfe8ec410cd5761f67895cc915432b9b59e23",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150831T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150831T120000",
+      "UID": "dbd98a98186809029fc858dddc5f060a1d6bb2f9c65cf6a9f1ae2bf84cf22984",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150907T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150907T120000",
+      "UID": "0d92af0626a2a4dd675f2bb7b6c4b23ab21ec4bcdb1129b70e8ed6dacffe076b",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150914T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150914T120000",
+      "UID": "2a477be0e9292e23b0f2af26d2f2de0d7c3d44cb6c9c97a7341699ba7008de87",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150921T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150921T120000",
+      "UID": "571dca8814dd49d549502d2ebfb29591b5b50ade331d4beefe583eb447b5f07d",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151012T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151012T120000",
+      "UID": "31481ea104982ea7d0ddecb8a25deaf9981a9bf136aa1125636f64d4a413927c",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151019T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151019T120000",
+      "UID": "e2221248badf91b4aad67b79a0e61f2cc516c19ff82dd267490b9e28264734ba",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151026T100000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151026T120000",
+      "UID": "5292d8cc99fbeaa0c3ff6d7283dddaa17a045bdd98011759228fafc7757a3553",
+      "LOCATION": "Merewether Lect 2 (Rm136)"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150731T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150731T110000",
+      "UID": "496b8078156ded32b3e8201443269e284b31cd2ebe212abccc6b69d99d5176d0",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150807T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150807T110000",
+      "UID": "c3c0db52b981d240ad27160b23635e08e10e93620c5cc07985856b7f72f61c09",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150814T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150814T110000",
+      "UID": "45a9804d5d208a309ddd627fc1a583b9b25d28f7ed218f55042dd3615eff876a",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150821T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150821T110000",
+      "UID": "1741c42a33b33bba267033615657e6a58f0dd4625b83daad1e8f7b6f6e5dc2af",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150828T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150828T110000",
+      "UID": "6af2b432b78b8de8f369b80c8ead4a0c81e59a07731086ad2a9f56af4cf6ff53",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150904T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150904T110000",
+      "UID": "ab22f21bb52de7092c0ef6aa4c6778189e2f3923193715943081c0f2bdf11ec4",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150911T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150911T110000",
+      "UID": "db08c5bfedf82a59fb43448c2667b6c1e6ac9fed0beb16da6ca13e3624c4aadf",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150918T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150918T110000",
+      "UID": "02535d9abc0548ef4b0fdcf9881dfa3c25d6462f3d3001235bf77ecb2b9e2c78",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150925T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150925T110000",
+      "UID": "f6ce37454dd3e9e67a0941a676d84c60c098c32f0106875d921284472218a8c7",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151009T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151009T110000",
+      "UID": "234fc91fc903562272100852301e1c7d09209d4be53ce2d3b05f5dba64f8934d",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151016T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151016T110000",
+      "UID": "f6e1d743f6bad19cf93928c192a30e2174616f45fe2fc5b2a8f12b167aa30890",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151023T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151023T110000",
+      "UID": "58354ac21f2289c35353b30e304f24886a43bdf2bf07438e1a5e080a30728d0f",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP2007 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151030T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151030T110000",
+      "UID": "b4ee7fa1fd4d07e7e3dae5b83287f694fd30197dc2669b63382cf5c2acd231c4",
+      "LOCATION": "SIT Lab 116"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150727T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150727T150000",
+      "UID": "f9d14317b9c6d9ffb33d500a73116c0da139067b363498140681cdc2772a344a",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150803T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150803T150000",
+      "UID": "fadf62bbdf61eabda63c8ac4f8e1c1686765af623e21b7d889e440d6d5d5649b",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150810T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150810T150000",
+      "UID": "b204f641f64df0abfce4f591537250f06a38b05d4a9b243e638b38e7df2c6f60",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150817T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150817T150000",
+      "UID": "6ee28b1b538ac785421584ab833074561eeb984bd5cc39888008398a22bda816",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150824T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150824T150000",
+      "UID": "eb9af2ff5ab058cec38391fd3a6cc5b7f661031962e9cdf67cd80f1a47d45d51",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150831T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150831T150000",
+      "UID": "a35b2d309a7ed0efa4dc40917e413325ced697386c9fc7272c1dbca197aba869",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150907T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150907T150000",
+      "UID": "bc5b3406f7176bc5ffeb72b7d015be317d26a2cc48005b885df7436369345452",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150914T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150914T150000",
+      "UID": "0bf6737d739c68e26a747f6705a02103ea58c30c09c2673e68f1617641cfcc1a",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150921T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150921T150000",
+      "UID": "9894a3915dfc0a551f2d488566b0675110752655c604cee8ed285f6b33e9316a",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151012T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151012T150000",
+      "UID": "a8f1e071f845be24ea8b3ee5c5cc2162f0bd680e7f079127ce210b79063fd04e",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151019T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151019T150000",
+      "UID": "7c11d3930df1d6de3cf9a9846532c4db3a48617f6792568931e7ebb7fa13c4b2",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151026T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151026T150000",
+      "UID": "246f62a2c3f244c01f59a833a1ef878b5bbed86c1aba960bf754fa215dd1d632",
+      "LOCATION": "Carslaw Lect Theatre 273"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150803T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150803T180000",
+      "UID": "35496be68674712d57108b0b86755c913dc1f32263f015f0dbd187620e3354dc",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150810T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150810T180000",
+      "UID": "b3f3c040da4390dc39487b33ed31147de60f359d6c6eed30bf524bcbfec7a504",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150817T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150817T180000",
+      "UID": "4d64fb8e3a3baccd547d4685bd8cdd7384c3b8c14be0c3a9a05c741f28630609",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150824T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150824T180000",
+      "UID": "34f35c307dd9fa32d9e7426f3a01035454553136071931f7f497cbfff87f165b",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150831T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150831T180000",
+      "UID": "6ca513520702001e7cbb0670b64ca948a9591829c47f5fb0eb546908b748e814",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150907T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150907T180000",
+      "UID": "7622b42ad988d8be00d199958be418cda9c01a7559a4d588299372b345943199",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150914T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150914T180000",
+      "UID": "db214a461e07b1541da5c8ca3686814a50ee2511911346caddd3df3349b3f0d5",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150921T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150921T180000",
+      "UID": "ce2327bfd70e987c80e029e2f70dfee1b1a76b116728d6c3c23460c396db8729",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151012T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151012T180000",
+      "UID": "202d12046d009a9b610bccd4ebd24d6b04a2e20eff347a188dd0001a09e51628",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151019T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151019T180000",
+      "UID": "6f111618ce3e08e345350c62ccfe196ff412fa77cf6fa20cfbf18c61b713a2f2",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "COMP3615 Practical",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151026T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151026T180000",
+      "UID": "e03065e944ba2250f1a6a866c8a925bfef440b736af0b83c6cbac2c454976ca5",
+      "LOCATION": "SIT Lab 117"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150729T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150729T160000",
+      "UID": "4c6a7f0d949e02e331fac9768a87a01652fe79c1abb1a0400b482766ab4ad68e",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150805T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150805T160000",
+      "UID": "c08b45104367c0381b4c5dc74a96db07af164150d08f11df7742bda8e88e2aa3",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150812T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150812T160000",
+      "UID": "ab7d4718baa0cdbdba6b164180867125cf94db2838157ec4cc30b75f8cb6045a",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150819T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150819T160000",
+      "UID": "394a48eadef415774917ddff395fc721279c4eeced1b2a1bf2a931842da26713",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150826T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150826T160000",
+      "UID": "6c121cda5cf7307ee6345c1ba9a8b25097b686e0080bbc10e09c7ba19c5efc8a",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150902T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150902T160000",
+      "UID": "1022c6812f5cc58989ed8cafa78daa2a5ff468901929af282a196c1f87615ba0",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150909T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150909T160000",
+      "UID": "616a2e89872071d3e97759a07c79ca81864f7cbb2ce504dbc8acc4f1b9070c9e",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150916T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150916T160000",
+      "UID": "7bbec0dd5bfd5e5ae201bb29ccb09c80f071af377e0dd60c0d27dd89b111b6d6",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150923T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150923T160000",
+      "UID": "f90bbfe013e9857e8b4d9e92bb2e59934ec596a31a7333641f427cb2456875a9",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151007T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151007T160000",
+      "UID": "9ff7b1ddcbfc22d69089a8be7b07c1a86a61aa06290162f2de289152b04fd60d",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151014T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151014T160000",
+      "UID": "2180de1d92a4c42cf88014c186ea2196f218826ec2dd946ffb93f8b6678afb8e",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151021T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151021T160000",
+      "UID": "b81c2fd77a95c85740119cbb52054757e81697fe505a121f65e5fa9095228410",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151028T140000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151028T160000",
+      "UID": "f0cbee1747981d68f69319b11d38fe65a9df57322458aa76e14ad4df11a743c3",
+      "LOCATION": "Elec Eng LT 351 (Madsen)"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150805T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150805T110000",
+      "UID": "67d54bf94a3964f7ad7c693e85c4f8e45d03ba93cdf2ab186ee38bfe55d7bea3",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150812T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150812T110000",
+      "UID": "4e12b635437cc9f4c3745c787091b15c3f967a68f81f1146a5ebe89a5b58084c",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150819T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150819T110000",
+      "UID": "c7cff702e2688211cdaf236908a3ebccdea61de0264ee351a0b5577ac7ccfafc",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150826T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150826T110000",
+      "UID": "a8df4d779d8db5988c8e34f61fa234731e6ba8ca993f58606d47a2c3040bbf2b",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150902T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150902T110000",
+      "UID": "6d3a13caecda98eec08e708e3c777fc61089ece6f6334b5affa80cacff7e1236",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150909T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150909T110000",
+      "UID": "0b7c52027ba60f79c756ab47bfd294b947d487bd73db14bb495000d1a8534d56",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150916T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150916T110000",
+      "UID": "23c52416160bddecbb49228a655a5ba452971c36937d2a2b0d11443eacc76c50",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150923T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150923T110000",
+      "UID": "2b067a49317fe04edc759f4a35c63f00e90b83cb699a9c25b67323977cf5e6d1",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151007T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151007T110000",
+      "UID": "37bb28c19779af4e3c53c743bd37dead1d929b22b01811c10c41e8d2d080ef43",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151014T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151014T110000",
+      "UID": "4dcb75f057ad579e7fb542c24d293d6e7273d38289f237a3ef668710275c8d93",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151021T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151021T110000",
+      "UID": "aad1d8f689320cae77f84e0b02a330e4ebf7e660b334173bb0baccf924482d2b",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Tutorial",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151028T090000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151028T110000",
+      "UID": "151487cb43a7aa78448957536389bdcfca7d6db532a81bff3e9dfd1ec3c4eebe",
+      "LOCATION": "Electrical Eng Tut Rm 614"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150804T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150804T140000",
+      "UID": "8b72232c555e99e6e170e1d23a6d754f5aa52d42636b2a0edf2db1b05bf078bf",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150811T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150811T140000",
+      "UID": "2fde1f31bbc2831722c8f337040d370941d50694a4e4a632eef958b713d2151b",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150818T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150818T140000",
+      "UID": "00e64395288e186141cb848eb5f028cbaa28a7269b185f0e27cfc7193efbf7bf",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150825T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150825T140000",
+      "UID": "139f8b1f19518a6530d3268fdb4dea37b0ce50c044dbf3ea3b682e747d7361a5",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150901T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150901T140000",
+      "UID": "0c681709ef031430aeb5b8e4bc03f55b316e76762c179dbe5b1c95e057403baa",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150908T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150908T140000",
+      "UID": "79dd11cd9fff9c4a353cdbe4a2a4470cc1bdf248c083d8b014bd258c113e7acf",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150915T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150915T140000",
+      "UID": "96ec57f6936061f7a5b0780ed5f852e536db7d2e4a27cea74919b48d012f9647",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150922T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150922T140000",
+      "UID": "697abb731714a67b57900590d34e80ef5c19ac1211d4b1bf691325f6b03dc67b",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151006T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151006T140000",
+      "UID": "dee5ff42c81ebee71ce58a425dbe325b5e6c36238e8fa2010246d9b156cf3efe",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151013T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151013T140000",
+      "UID": "e0f8d07f77e6602c5a51ef7b45c375b4be2126286ff47b35f87381c85ec391ad",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151020T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151020T140000",
+      "UID": "7aa769f7f9580e4e633eaa06a6428b2cac7024c116f352e9dcfdcf5aa30c46c1",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3506 Laboratory",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151027T120000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151027T140000",
+      "UID": "9f2ba0cbe52dd3d134ffcdf1907fb2dfd9497dce3686ec6ec0360b148c561424",
+      "LOCATION": "Electrical Eng 440"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150807T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150807T170000",
+      "UID": "0a644d96e165b84b61f7f464dfa9a87401f94495bfe38ca792493f4ac97dbcb1",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150814T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150814T170000",
+      "UID": "4e63a0b7933ba595409c4ba64ad9d9f27048499ae6397d5758b7d1cd76743f21",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150821T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150821T170000",
+      "UID": "c0e9b7560c9c622b6f19dd6490029fddffe38f2491f591b7e541ddfe67d901e8",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150828T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150828T170000",
+      "UID": "c9ced034c41845f8360ca95b0aa2ee6d183875837d33aa7acb15c5a4fa73199e",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150904T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150904T170000",
+      "UID": "3a24c17bd02e9e04f998bc8f5e7d31978a311e025308e98bf8390aaf6b7dd18d",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150911T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150911T170000",
+      "UID": "28a40f422eb14febd3563e5670f005b08cd2ac0e6be2611bd134ca65f4c5a6ae",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150918T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150918T170000",
+      "UID": "b8e00a9d2b72860a2fb7e166af8135d89688e67ca454b7b54f3a78880aa3f08a",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150925T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150925T170000",
+      "UID": "013b9754c1c7132833bf23bb066040a0279d88feeba3760ce2699f2129fbc6c7",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151009T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151009T170000",
+      "UID": "f96eb2e2113e64919d125aca0e9cedf2c1eefbd3f70852681659cb3f7ba70cb9",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151016T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151016T170000",
+      "UID": "acbb594604756e0989b2f8749604ccad9791d26f8a6d82f7d7f23bd1edc9edb9",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151023T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151023T170000",
+      "UID": "460918809ebc257fb52f8f8d0f695833ca932ac2dc7d21be2ee78a2876f44c26",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lab or Tut",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151030T150000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151030T170000",
+      "UID": "98543405a6490c18af38ac41eccf81a43a9570a02d3f4fe83710bc017c85a0ba",
+      "LOCATION": "Elec Eng Lab 522"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150731T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150731T150000",
+      "UID": "dabf5952d35c5fcb20d694e49bf92f7c92932715427c70830afcb1a3f308b3d5",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150807T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150807T150000",
+      "UID": "1130ba0ef9174d7be685c54f8118358fcf8d11f6437e0c65ace05383040f4d46",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150814T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150814T150000",
+      "UID": "c6ed58b0e81633479b24059534759ede038c3afb90adbc9d0f2ae66b1c4c1dc6",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150821T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150821T150000",
+      "UID": "51f19bf28edeaccb630408709be0b18a2cc7533de900e1094fcefe9dd0e16373",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150828T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150828T150000",
+      "UID": "525782d2ed4932b8c8d16cd03ed1c84e47b128de9f776575643a64dc66ad898a",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150904T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150904T150000",
+      "UID": "c845ef4a365f4320b5e5d44098f06d93898aec5a164db0883a97f885522133dd",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150911T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150911T150000",
+      "UID": "8f32c7c8525addb86c4307327cd9d2c27da382022dc78895ffd9697705977e1a",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150918T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150918T150000",
+      "UID": "a4abb69108a2a2fdbdbbe7874cc70b318879243e79e36293671c21d40595cf62",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150925T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20150925T150000",
+      "UID": "9f2793dc7ec5e1fd313ddde90e27c4545a1ad3367db669405f3738940ad61e08",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151009T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151009T150000",
+      "UID": "dcfe9c20bc334d8390aa5d89265bd22cc5c2314cdb7c6869ab94740099e3aa91",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151016T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151016T150000",
+      "UID": "87a4f7ee6c47f56ae48282f1cb81667ab5f98418efa9f515b0b8ef7f084d3113",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151023T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151023T150000",
+      "UID": "1fc23cec134542972df99275eac507c557d6dd3baa661c8ac1d5a0349901f1d6",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    },
+    {
+      "SUMMARY": "ELEC3609 Lecture",
+      "DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151030T130000",
+      "DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME": "20151030T150000",
+      "UID": "bc5af4e6109b14a98620e7d302585fa4e661e0a580a439fda76a58ca149c5930",
+      "LOCATION": "Elec Eng LT 2 (Rm 450)"
+    }
+  ]
+}

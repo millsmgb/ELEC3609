@@ -18,7 +18,7 @@
 	    <h1 id="title"> Timetable Management System </h1> 
 			<a href ="#groups"> groups tab    </a>
 			<a href ="#upload">    upload tab </a>
-			<a href ="/signout">    sign out </a>
+			<a href ="/logout">    sign out </a>
 
 
 	</div>
@@ -30,6 +30,32 @@
 	</div>
 
 	
+	<h1> Personal Timetable </h1>
+	    <p>    Click <a ng-click="loadtimes()">here</a> to load data from set 1.</p>
+
+
+	<table class = "table table-bordered ">
+    <tr>
+        <th>Hour </th>
+        <th>MON </th>
+        <th>TUES </th>
+        <th>WED </th>
+        <th>THURS </th>
+        <th>FRI </th>
+
+
+
+    </tr>
+    <tr ng-repeat="time in times">
+        <td>{{time.hour}}</td>
+        <td>{{time.mon}}</td>
+        <td>{{time.tues}}</td>
+		<td>{{time.wed}}</td>
+        <td>{{time.thurs}}</td>
+        <td>{{time.fri}}</td>
+    </tr>
+	
+</table>
 
 	    
 	<!-- angular related -->
