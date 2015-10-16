@@ -89,78 +89,113 @@ function isLoggedIn(req, res, next) {
 
 		writetofile(req.body);
 		
+	setTimeout(function() {
 	
-		console.log("about to res!!!!!!!!!!!!!!!");
+	
+	
+			console.log("about to res!!!!!!!!!!!!!!!");
+			var fs = require('fs');
+			var jsontable;
+			// THIS  CONVERTS THE FILE TO JSON
+			
+		fs.readFile('file.ics', 'utf8', function (err,data) {
+		  if (err) {
+			return console.log(err);
+			}
+			 jsontable = ical2json.convert(data);
+			 		var currevent ="" ;
+					
+			/////////////////////////
+			 for(var i=0; i< jsontable.VEVENT.length; i++){
+				//console.log(jsontable.VEVENT[i].SUMMARY);
+				if(currevent ==""){
+				
+					currevent=	jsontable.VEVENT[i].SUMMARY;
+					console.log(currevent);
+					var sample = jsontable.VEVENT[i];
+					var begintime = sample['DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME'].split("T");
+					var endtime = sample['DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME'].split("T");
+					console.log(begintime[1]/10000);
+					console.log(endtime[1]/10000);
+				}
+				if(currevent != jsontable.VEVENT[i].SUMMARY){
+				
+					currevent = jsontable.VEVENT[i].SUMMARY;
+					console.log(currevent);
+					var sample = jsontable.VEVENT[i];
+					var begintime = sample['DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME'].split("T");
+					var endtime = sample['DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME'].split("T");
+					console.log(begintime[1]/10000);
+					console.log(endtime[1]/10000);
+
+				} 
+			 }
+			/////////////////////////////
+
+			console.log("!!!!!!!!!!!!!!!!!!!!!!");
+
+		});
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		res.json("comeback");
+
+}, 2000);
 
 	});
 	
 
 	var writetofile = function(path){
+	
 		console.log("insidecreatejason");
 		//variables to get the contents from the server. 
-		var tablepath = path;
-		var cont = false;
-		var http = require('https');
 		var fs = require('fs');
-
-	
-	
-	
-	
-	
-	
-	var http = require('https');
-var fs = require('fs');
-
-var download = function(url, dest, cb) {
-  var file = fs.createWriteStream(dest);
-  var request = http.get(url, function(response) {
-    response.pipe(file);
-    file.on('finish', function() {
-      file.close(cb);  // close() is async, call cb after close completes.
-    });
-  }).on('error', function(err) { // Handle errors
-    fs.unlink(dest); // Delete the file async. (But we don't check the result)
-    if (cb) cb(err.message);
-  });
-};
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-
+		var http = require('https');
+		var jsontable;
+		var url = path.path;
+		var dest = "example.txt";
 		
-		// THIS  CONVERTS THE FILE TO JSON
-		fs.readFile('file.ics', 'utf8', function (err,data) {
-		  if (err) {
-			return console.log(err);
-			}
-			var jsontable = ical2json.convert(data);
-			console.log(jsontable);
-			console.log("!!!!!!!!!!!!!!!!!!!!!!");
-		});
-			
-			
-		//jsontable = JSON.stringify(jsontable, undefined, 2);
-		////console.log(jsontable);		
+
+		download(url);
 		
+			
 	
 
 	};
 
 	
 
+	var download = function(url,cb) {
 	
+		var http = require('https');
+		var fs = require('fs');
+
+var file = fs.createWriteStream("file2.ics");
+
+
+ 
+ 
+ http.get(url, function(response){
+	    response.pipe(file);
+		console.log("after pipe");
+ 
+ })
+ 
+console.log(" done ...");
+		
+		
+		
+		
+		
+		};
 
 	
 	
