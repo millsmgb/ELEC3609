@@ -86,76 +86,97 @@ function isLoggedIn(req, res, next) {
 	// HERE GOES THE TIMETABLE FUNCTIONS
 	
 	app.post('/icaldl', function(req,res,next){
-		console.log("inside the icalroute");
-		//createjson(req.body)
-	
-	var cont = false;
-	console.log("CONT IS "+ cont);
-	
 
-	cont =	createjson(req.body);
+		writetofile(req.body);
 		
-		
+	
 		console.log("about to res!!!!!!!!!!!!!!!");
-		
-		while(cont== false){};
-		
-		
-		
 		res.json("comeback");
 
 	});
 	
 
-	var createjson = function(path){
+	var writetofile = function(path){
 		console.log("insidecreatejason");
 		//variables to get the contents from the server. 
-		var jsontable;
 		var tablepath = path;
-		var cont2 = false;
+		var cont = false;
 		var http = require('https');
 		var fs = require('fs');
-		var file = fs.createWriteStream("file.ics");
 
-		// GET FILE FROM LINK
-		var request = http.get( tablepath.path,function(response) {
-			// write the content to a file
-			response.pipe(file);
-			console.log("just piped the file")
-			// WHY IS THE FILE NOT ALL HERE!?!?!?!?!?!!?!?!?!?!?!?!?!
-			
-			
-			
-			fs.readFile('file.ics', 'utf8', function (err,data) {
-			  if (err) {
-				return console.log(err);
-			  }
-			  // convert the date in the text file to json
-			  jsontable  = ical2json.convert(data);
-					console.log("%%%%%%%%%%%%%%");
-					console.log(jsontable);
-				  cont2 = true;
-				  console.log("YOU MAY PASS");
+	
+	
+	
+	
+	
+	
+	var http = require('https');
+var fs = require('fs');
 
+var download = function(url, dest, cb) {
+  var file = fs.createWriteStream(dest);
+  var request = http.get(url, function(response) {
+    response.pipe(file);
+    file.on('finish', function() {
+      file.close(cb);  // close() is async, call cb after close completes.
+    });
+  }).on('error', function(err) { // Handle errors
+    fs.unlink(dest); // Delete the file async. (But we don't check the result)
+    if (cb) cb(err.message);
+  });
+};
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-			});
-			
-			
-			jsontable = JSON.stringify(jsontable, undefined, 2);
+	
 
-			console.log(jsontable);		
-			//while(cont2== false){console.log("&&&")};
-			
-		//console.log(data+"***");
-
-		});
 		
+		// THIS  CONVERTS THE FILE TO JSON
+		fs.readFile('file.ics', 'utf8', function (err,data) {
+		  if (err) {
+			return console.log(err);
+			}
+			var jsontable = ical2json.convert(data);
+			console.log(jsontable);
+			console.log("!!!!!!!!!!!!!!!!!!!!!!");
+		});
+			
+			
+		//jsontable = JSON.stringify(jsontable, undefined, 2);
+		//console.log(jsontable);		
+		
+	
 
-		return true;
 	};
 
 	
 
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
 	
 };
 
