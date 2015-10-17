@@ -3,7 +3,7 @@
         <head>
         <meta charset="UTF-8">              
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TimetableSharing Log-In</title>
+        <title>TimetableSharing Account Retrieval</title>
         
         <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="../css/borderless.css" rel="stylesheet" type="text/css"/>
@@ -14,45 +14,39 @@
             <div class="container">
                 
                 <!-- Navigation Bar container -->
-                <div class="navbar navbar-inverse" style="background-color: #419641">
+                <div class="navbar navbar-inverse">
                     <a class="navbar-brand">Timetable Sharing</a>
                     <div class="navbar-collapse collapse navbar-responsive-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="guestPage.html">Home</a></li>
-                            <li><a href="registerPage.html">Sign up</a></li>
+                            <li><a href="guestPage.html">Home</a></li>                            
+                            <li><a href="loginPage.html">Log In</a></li>
+                            <li><a href="registerPage.html">Register Account</a></li>
                         </ul>
                     </div>
                 </div>
                 
-                <!-- Register box container -->
-                <div id="login-box">
+                <!-- Log in box container -->
+                <div id="retrieve-box">
                     <form class="form-horizontal">
                         <fieldset>
-                            <legend>Sign In</legend>
-                            <img id="centre-img" src="../img/timeTableLogoLoL.jpg" alt=""/>
+                            <legend>Retrieve an Account</legend>
                             <div class="form-group">
-                                <label class="col-lg-3 control-label" for="inputUsername">Username</label>
+                                <label class="col-lg-4 control-label" for="inputUsername">Account Username</label>
                                 <div class="col-lg-7">
                                     <input type="text" class="form-control" id="inputUsername" placeholder="Username">
                                 </div>
                             </div>
-
+                            <h3 style="text-align: center">OR</h3>                           
                             <div class="form-group">
-                                <label class="col-lg-3 control-label" for="inputPassword">Password</label>
+                                <label class="col-lg-4 control-label" for="inputEmail">Email</label>
                                 <div class="col-lg-7">
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
                                 </div>
-                            </div>
-                            <hr>
+                            </div> 
 
-                            <div class="form-group" id="log-buttons">
-                                <div class="checkbox" style="padding-bottom: 10px">
-                                    <label class="checkbox"><input type="checkbox"> Remember Me</label>
-                                </div>
-                                <a href="guestPage.html" class="btn btn-default">Cancel</a>
-                                <button type="submit" class="btn btn-primary">Log In</button>
-                                <br>
-                                <a type="#" class="btn btn-default" style="margin-top: 25px">Forgot Username/Password</a>
+                            <div class="form-group" id="retrevie-buttons">
+                                <a href="guestPage.html"  class="btn btn-default">Cancel</a>
+                                <button type="submit" class="btn btn-primary">Retrieve Account</button>
                                 <br>
                                 <a href="registerPage.html" class="btn btn-default" style="margin-top: 5px">Register Account</a>
                             </div>
@@ -69,23 +63,19 @@
     
     <style>
         body {
-            background-color: #225223;
+            background-color: #2386c8;
         }
-        #login-box {
+        #retrieve-box {
             background-color: white;
             border-radius: 6px;
             padding: 48px 90px;
             margin: 100px 150px;
         }
-        #centre-img{
-            display: block;
-            margin: auto;
-            margin-bottom: 20px;
-        }
-        #log-buttons {
+        #retrevie-buttons {
             float: right;
             position: relative;
-            left: -35%;
+            left: -30%;
+            padding-top: 50px;
         }
     </style>
 </html>
