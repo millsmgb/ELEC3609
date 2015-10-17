@@ -18,20 +18,20 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="guestPage.html">Home</a></li>
                             <li><a href="loginPage.html">Log In</a></li>
-                            <li><a href="registerPage.html">Sign Up</a></li>
+                            <li><a href="registerPage.html">Sign up</a></li>
                         </ul>
                     </div>
                 </div>
                
                 <div class="jumbotron" id="introarea">
-                    <div class="top">
+                    <div class="top-half">
                         <h1>Timetable Sharing</h1>
                         <p class="lead">Built to share your timetable with friends!</p>
                         <hr>
                     </div>
-                    <div class="container-fluid">
+                    <div class="container-fluid" id="bottom-half">
                         <div class="row">
-                            <div class="col-lg-7">
+                            <div class="col-lg-7" style="padding-bottom: 20px">
                                 <img src="../img/frontpagePhoto.gif"/>
                             </div>
                             
@@ -78,18 +78,36 @@
                 
                 <div id="info-box">
                     <h2>Feature list:</h2>
-                    <br/>
-                    <br/>
-                    <h3>Share your timetable</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum<br>est elit, vitae ullamcorper urna sagittis volutpat. Proin interdum nisi nulla<br>, quis pulvinar ipsum blandit lacinia.</p>
-                    <br/>
-                    <br/>
-                    <h3 id="right-text">Make a group!</h3>
-                    <p id="right-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum<br>est elit, vitae ullamcorper urna sagittis volutpat. Proin interdum nisi nulla<br>, quis pulvinar ipsum blandit lacinia.</p>
-                    <br/>
-                    <br/>
-                    <h3>Meet fellow peers!</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum<br>est elit, vitae ullamcorper urna sagittis volutpat. Proin interdum nisi nulla<br>, quis pulvinar ipsum blandit lacinia.</p>
+                    <hr>
+                    <div id="feature-list">
+                        <div style="display:inline-block">
+                            <h3>Share your timetable</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum<br>est elit, vitae ullamcorper urna sagittis volutpat. Proin interdum nisi nulla,<br>quis pulvinar ipsum blandit lacinia.</p>
+                        </div>
+                        <div style="display:inline-block;vertical-align:top; padding-left: 30px">
+                            <img src="../img/screenGrab2.jpg" alt=""/>
+                        </div>                  
+                        <br/>                    
+                        <br/>
+                        <br/>
+                        <div style="display:inline-block;vertical-align:top; padding-right: 30px">
+                            <img src="../img/screenGrab2.jpg" alt=""/>
+                        </div>  
+                        <div style="display:inline-block; text-align: right;">
+                            <h3>Make a group!</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum<br>est elit, vitae ullamcorper urna sagittis volutpat. Proin interdum nisi nulla,<br>quis pulvinar ipsum blandit lacinia.</p>
+                        </div>               
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div style="display:inline-block">
+                            <h3>Meet fellow peers!</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum<br>est elit, vitae ullamcorper urna sagittis volutpat. Proin interdum nisi nulla,<br>quis pulvinar ipsum blandit lacinia.</p>
+                        </div>
+                        <div style="display:inline-block;vertical-align:top; padding-left: 30px">
+                            <img src="../img/screenGrab2.jpg" alt=""/>
+                        </div>                    
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,14 +123,20 @@
         }
         #introarea{
             background-color: #fff;
+            margin-top: 100px;
         }
         #info-box {
             border-radius: 6px;
             padding: 48px 60px;
             background-color: #fff;
+            margin-top: 100px;
         }
-        #right-text {
-            text-align: right;
+        #bottom-half {
+            padding-top: 50px;
+        }
+        #feature-list {
+            margin-left: 30;
+            margin-right: 30;
         }
     </style>
 </html>
