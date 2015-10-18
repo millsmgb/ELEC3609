@@ -24,7 +24,7 @@ myApp.controller('AppCtrl', ['$scope', '$http','$location','$rootScope', functio
 $scope.processical = function(fileurl){
 
 	console.log("The button worked");
-	var file = {path: "https://www.timetable.usyd.edu.au/personaltimetable/timetable/calendar/430436262/iDXEYtIqEBi1XyyLc9GZi7gQosPFggDiBv9M9FS7zgI/timetable.ics"};
+	var file = {path: "https://www.timetable.usyd.edu.au/personaltimetable/timetable/calendar/430436262/iDXEYtIqEBi1XyyLc9GZi7gQosPFggDiBv9M9FS7zgI/timetable.ics"}; // get the url from the input
 	
 	console.log(file);
 	
