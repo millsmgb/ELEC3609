@@ -7,7 +7,6 @@ var ical2json = require("ical2json");
 var Timetable  = require('../models/timetable');
 var moment = require('moment');
 moment().format();
-var tabledate = moment();
 	// =====================================
 	// HOME PAGE (with login links) ========
 	// =====================================
@@ -127,13 +126,10 @@ function isLoggedIn(req, res, next) {
 					unityear = begintimesplit[0].substring(0,4);
 					unitmonth = begintimesplit[0].substring(4,6);
 					unitday = begintimesplit[0].substring(6,8);
-					console.log(unityear+" "+unitmonth+ " "+ unitday);
-					
+					var tabledate =  new moment(unityear+"-"+unitmonth+"-"+unitday);
 					//now go set the date this unit was on.
-					tabledate.set( { 'year': unityear ,'month': unitday,'day': unitmonth} );
 					// now to get the day of the week this date was on
-					var weekday = tabledate.get('day');
-					console.log("THIS DATE HAS----"+ weekday);
+					var weekday = tabledate.day();
 					if(weekday ==1)
 						console.log("MON");	
 					else if(weekday ==2)
@@ -146,11 +142,12 @@ function isLoggedIn(req, res, next) {
 						console.log("FRI");						
 					
 					// function to get the times between the beginning and end
-			//		var timediff = endtime - begintime;
-			//		var inbetween = [];
-			//		inbetween = between(inbetween,timediff,begintime);
-			//		createrecords();
-			
+					var timediff = endtime - begintime;
+					var inbetween = [];
+					inbetween = between(inbetween,timediff,begintime);
+					createrecords();
+					console.log("----")
+
 				} 
 			 }
 
