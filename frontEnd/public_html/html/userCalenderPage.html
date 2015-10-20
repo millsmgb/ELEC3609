@@ -14,6 +14,9 @@ and open the template in the editor.
         <link href="../css/borderless.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        <script src="../js/jquery.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        
         <div class="site-wrapper">
             <!-- NavBar class used when the user is logged in -->        
             <div class="navbar navbar-inverse" style="background-color: #239a55">
@@ -43,9 +46,28 @@ and open the template in the editor.
                             <!-- TODO: Implement import -->
                             <img id="scaledImages" src="../img/timetableSample.png" alt=""/>
                         </div>
+                    </div>
                 </div>
-                </div>
-                
+                <br>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <legend>Upload new Timetable</legend>
+                        <div class="form-group">
+                            <label for="inputURL" class="col-lg-2 control-label">Upload via URL</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputURL">
+                            </div>
+                            <br>
+                            <h3 style="text-align: center">OR</h3>
+                            <label class="col-lg-2 control-label">Upload from File</label>
+                            <div class="col-lg-10">
+                                <input id="input-ics" type="file" multiple="false" class="file-loading">
+                                <p class="help-block">Upload ICS formatted timetable</p>
+                            </div>                            
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </fieldset> 
+                </form>
             </div>
             
         </div>
@@ -55,6 +77,12 @@ and open the template in the editor.
         #scaledImages {
             max-height: 100%;
             max-width: 100%;
+        }
+        .form-horizontal {
+            border: solid;
+            border-color: #2ECC71;
+            border-radius: 6px;
+            padding: 20px;
         }
     </style>
 </html>
