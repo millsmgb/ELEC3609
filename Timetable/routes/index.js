@@ -6,6 +6,28 @@ var router = express.Router();
 var ical2json = require("ical2json");
 var Timetable  = require('../models/timetable');
 var moment = require('moment');
+var hour = require('../models/hour');
+var tabletemplate = [			{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""}
+					];
 moment().format();
 	// =====================================
 	// HOME PAGE (with login links) ========
@@ -86,95 +108,120 @@ function isLoggedIn(req, res, next) {
 	// HERE GOES THE TIMETABLE FUNCTIONS
 	
 	app.post('/icaldl', function(req,res,next){
+			
 
 		writetofile(req.body); // 1
 		
 		setTimeout(function() {
+			console.log("INSIDE TIMEOUT")
+			createjsontable();
+			var x = tabletemplate;
+			
+		// return the filled out timetable in json format
+			res.json(JSON.stringify(x));
+		//	res.json();
+
+		}, 2500);
+
+	});
 	
-			console.log("about to res!!!!!!!!!!!!!!!");
+
+	var createjsontable = function(){
+	
+			console.log("about to create json file");
 			var fs = require('fs');
 			var jsontable;
 			var unityear;
 			var unitmonth;
 			var unitday;
-			// THIS  CONVERTS THE FILE TO JSON
-			
+			var readfiledata;
+			// THIS  CONVERTS THE FILE TO JSO\N
 		// get file that was written from link
-		fs.readFile('file.ics', 'utf8', function (err,data) {
-		  if (err) {
-			return console.log(err);
-			}
-			 jsontable = ical2json.convert(data);
-			 		var currevent ="" ;
+	//		readfiledata = fs.readFile('file.ics', 'utf8', function (err,data) {
+				//if (err) {return console.log(err);}
+	//			console.log("THIS IS THE DATA");
+	//			console.log(data);
+	//			return data;
+	//		});
+	
+var xfile = fs.readFileSync("file.ics").toString();
+			
+			
+				
+			// ical2json conversion
+			 jsontable = ical2json.convert(xfile);
+			 var currevent ="" ;
 					
 				// here the json is created from the file with the timetable data
 			 for(var i=0; i< jsontable.VEVENT.length; i++){
-				//console.log(jsontable.VEVENT[i].SUMMARY);
 	
 				// this find the first unique unit in the timetable file
 				if(currevent != jsontable.VEVENT[i].SUMMARY ){
-
-					currevent = jsontable.VEVENT[i].SUMMARY;
-					console.log(currevent);
-					var sample = jsontable.VEVENT[i];
+			
+					currevent = jsontable.VEVENT[i].SUMMARY; // event name
+					var sample = jsontable.VEVENT[i]; // 
 					var begintimesplit = sample['DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME'].split("T");
 					var begintime = begintimesplit[1]/10000;
 					var endtimesplit = sample['DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME'].split("T");
 					var endtime = endtimesplit[1]/10000;
-					var stringday;
+					
 					// this is to get the yyyy/mm/dd from the string
 					unityear = begintimesplit[0].substring(0,4);
 					unitmonth = begintimesplit[0].substring(4,6);
 					unitday = begintimesplit[0].substring(6,8);
 					var tabledate =  new moment(unityear+"-"+unitmonth+"-"+unitday);
-					//now go set the date this unit was on.
+					
 					// now to get the day of the week this date was on
 					var weekday = tabledate.day();
-					if(weekday ==1)
-						console.log("MON");	
-					else if(weekday ==2)
-						console.log("TUES");	
-					else if(weekday ==3)
-						console.log("WED");	
-					else if(weekday ==4)
-						console.log("THURS");
-					else if(weekday ==5)
-						console.log("FRI");						
-					
+	
 					// function to get the times between the beginning and end
 					var timediff = endtime - begintime;
-					var inbetween = [];
-					inbetween = between(inbetween,timediff,begintime);
-					createrecords();
+					tabletemplate = between(timediff,begintime,currevent,weekday,tabletemplate);
+					console.log(tabletemplate);
+
 					console.log("----")
+					
 
 				} 
 			 }
 
 			console.log("!!!!!!!!!!!!!!!!!!!!!!");
 
-		});
-					
-		res.json("comeback");
 
-}, 2000);
-
-	});
-	
-	var createrecords = function(){
 	
 	
-	}
 	
-	var between = function(inbetween,timediff,begintime){
 	
+	};
+	
+	var between = function(timediff,begintime,currevent,weekday,tabletemplate){
+		console.log("INSIDE BETWEEN!!!!!");
+		//var x = new Array();
+		
 		for(var i=0; i<= timediff; i++){
-			console.log(i + begintime);
-			inbetween[i-0] = (i+begintime);
+				console.log(i + begintime);
+				tabletemplate[i +begintime].hour = i+begintime;
+
+					if(weekday ==1){
+						tabletemplate[i +begintime].mon = currevent;
+
+						}
+					else if(weekday ==2){
+						tabletemplate[i +begintime].tues = currevent;
+					}
+					else if(weekday ==3){
+						tabletemplate[i +begintime].wed = currevent;
+					}
+					else if(weekday ==4){
+						tabletemplate[i +begintime].thurs = currevent;
+					}
+					else if(weekday ==5){
+						tabletemplate[i +begintime].fri = currevent;
+					}
 		}
 		
-		return inbetween;
-
+		return tabletemplate;
+		
 	
 	
 	

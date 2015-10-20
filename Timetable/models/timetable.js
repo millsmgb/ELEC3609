@@ -3,16 +3,17 @@ var mongoose = require('mongoose');
 
 // define the schema for our post model
 var timetableSchema = mongoose.Schema({
-    sid : String,
-	times : [{
-				Summary : String,
-				Start : Number,
-				End :   Number,
-				Day:    String
-			}]
+
+hour : [{
+	mon: String,
+	tues: String,
+	wed: String,
+	thurs: String,
+	fri: String
+     }],
+somekey: String
 	
 	
-	,
 });
 
 

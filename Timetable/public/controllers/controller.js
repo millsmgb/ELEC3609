@@ -31,9 +31,12 @@ $scope.processical = function(fileurl){
 	$http.post('/icaldl',file).success(function(response){ // ask server through this route
 	
 	
-		
-			console.log(response+"###");
-			
+	
+			var x = response.body
+		var y = response
+			console.log(x+"%");
+					console.log(y+"%*");
+
 
 
 	}) ;
