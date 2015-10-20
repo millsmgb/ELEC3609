@@ -33,8 +33,32 @@ if(fileurl == "" || !fileurl )
 	
 	// this gets back the json table from the server.
 	$http.post('/icaldl',file).success(function(response){ // ask server through this route
-		 timetable = JSON.parse(response);
-		 $scope.times = timetable;
+	
+		
+		timetable = JSON.parse(response);
+		
+		
+		var currenttable = $scope.times;
+
+		if(currenttable == undefined){
+						console.log(fileurl);
+
+			console.log( "NOTHING EHRE");
+			$scope.times = timetable;
+		
+		} else{ // begin comparing the current table with the new table
+			console.log(fileurl);
+			console.log("THERE IS A TABLE HERE");
+			console.log(JSON.stringify(currenttable[13]));
+			$scope.times = timetable;
+		
+		
+		
+		}
+		
+		
+		
+		
 
 	}) ;
 	
@@ -54,7 +78,7 @@ $scope.loadtimes = function(){
 
  var examplejson1 = [h1,h2,h3,h4];
 
- $scope.times = examplejson1;
+ //$scope.times = examplejson1;
 
 }
 

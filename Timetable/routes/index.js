@@ -108,26 +108,26 @@ function isLoggedIn(req, res, next) {
 	
 
 	var createjsontable = function(){
-	var tabletemplate = [		{"hour":"0", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"1", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"2", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"3", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"4", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"5", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"6", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"7", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"8", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"9", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"10", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"11", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"12", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"13", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"14", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"15", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"16", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"17", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"18", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"19", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""}
+	var tabletemplate = [		{"hour":"0", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"1", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"2", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"3", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"4", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"5", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"6", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"7", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"8", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"9", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"10", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"11", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"12", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"13", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"14", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"15", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"16", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"17", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"18", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"19", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""}
 					];
 			console.log("about to create json file");
 			var fs = require('fs');
