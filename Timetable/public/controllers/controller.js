@@ -1,5 +1,5 @@
 //https://www.timetable.usyd.edu.au/personaltimetable/timetable/calendar/430436262/iDXEYtIqEBi1XyyLc9GZi7gQosPFggDiBv9M9FS7zgI/timetable.ics
-
+//https://www.timetable.usyd.edu.au/personaltimetable/timetable/calendar/312092938/4DKWirtoV3UpPpFRF90uCzAvjeKXvpL3eLjvi6XdXHZ/timetable.ics
 var myApp = angular.module('myApp', ['ngRoute'])
 	.config(['$routeProvider',function($routeProvider){
 
@@ -22,29 +22,28 @@ myApp.controller('AppCtrl', ['$scope', '$http','$location','$rootScope', functio
 
 
 $scope.processical = function(fileurl){
+// do not do anything if the directory is blank
+if(fileurl == "" || !fileurl )
+		return ;
 
 	console.log("The button worked");
-	var file = {path: "https://www.timetable.usyd.edu.au/personaltimetable/timetable/calendar/430436262/iDXEYtIqEBi1XyyLc9GZi7gQosPFggDiBv9M9FS7zgI/timetable.ics"}; // get the url from the input
-	
+	var file = {path: fileurl}; // get the url from the input
+	var timetable;
 	console.log(file);
 	
+	// this gets back the json table from the server.
 	$http.post('/icaldl',file).success(function(response){ // ask server through this route
-	
-	
-	
-			var x = response.body
-		var y = response
-			console.log(x+"%");
-					console.log(y+"%*");
-
-
+		 timetable = JSON.parse(response);
+		 $scope.times = timetable;
 
 	}) ;
 	
 	
+
+
 	
-	
-}
+		
+};
 
 
 $scope.loadtimes = function(){
@@ -58,17 +57,6 @@ $scope.loadtimes = function(){
  $scope.times = examplejson1;
 
 }
-
-
-
-var comparetimes = function(time){
-
-	
-
-
-
-}
-
 
 
 

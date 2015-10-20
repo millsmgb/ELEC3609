@@ -7,27 +7,7 @@ var ical2json = require("ical2json");
 var Timetable  = require('../models/timetable');
 var moment = require('moment');
 var hour = require('../models/hour');
-var tabletemplate = [			{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""}
-					];
+
 moment().format();
 	// =====================================
 	// HOME PAGE (with login links) ========
@@ -108,17 +88,18 @@ function isLoggedIn(req, res, next) {
 	// HERE GOES THE TIMETABLE FUNCTIONS
 	
 	app.post('/icaldl', function(req,res,next){
-			
+	
+	
 
 		writetofile(req.body); // 1
 		
 		setTimeout(function() {
 			console.log("INSIDE TIMEOUT")
-			createjsontable();
-			var x = tabletemplate;
-			
+			var returnable = createjsontable();
 		// return the filled out timetable in json format
-			res.json(JSON.stringify(x));
+			console.log(returnable);
+			console.log("@@@@@@@@@@@@@@@@@@@@")
+			res.json(JSON.stringify(returnable));
 		//	res.json();
 
 		}, 2500);
@@ -127,7 +108,27 @@ function isLoggedIn(req, res, next) {
 	
 
 	var createjsontable = function(){
-	
+	var tabletemplate = [		{"hour":"0", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"1", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"2", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"3", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"4", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"5", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"6", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"7", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"8", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"9", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"10", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"11", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"12", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"13", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"14", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"15", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"16", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"17", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"18", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""},
+								{"hour":"19", "mon": "", "tue": "", "wed": "", "thurs": "", "fri": ""}
+					];
 			console.log("about to create json file");
 			var fs = require('fs');
 			var jsontable;
@@ -135,94 +136,74 @@ function isLoggedIn(req, res, next) {
 			var unitmonth;
 			var unitday;
 			var readfiledata;
-			// THIS  CONVERTS THE FILE TO JSO\N
+			var templateinstance = tabletemplate ;
+			// THIS  CONVERTS THE FILE TO JSON
 		// get file that was written from link
-	//		readfiledata = fs.readFile('file.ics', 'utf8', function (err,data) {
-				//if (err) {return console.log(err);}
-	//			console.log("THIS IS THE DATA");
-	//			console.log(data);
-	//			return data;
-	//		});
 	
-var xfile = fs.readFileSync("file.ics").toString();
+	
+			var xfile = fs.readFileSync("file.ics").toString();
 			
 			
-				
 			// ical2json conversion
 			 jsontable = ical2json.convert(xfile);
 			 var currevent ="" ;
-					
+			
+
 				// here the json is created from the file with the timetable data
 			 for(var i=0; i< jsontable.VEVENT.length; i++){
-	
+
 				// this find the first unique unit in the timetable file
 				if(currevent != jsontable.VEVENT[i].SUMMARY ){
-			
+				
 					currevent = jsontable.VEVENT[i].SUMMARY; // event name
 					var sample = jsontable.VEVENT[i]; // 
 					var begintimesplit = sample['DTSTART;TZID=Australia/Sydney;VALUE=DATE-TIME'].split("T");
 					var begintime = begintimesplit[1]/10000;
 					var endtimesplit = sample['DTEND;TZID=Australia/Sydney;VALUE=DATE-TIME'].split("T");
 					var endtime = endtimesplit[1]/10000;
-					
 					// this is to get the yyyy/mm/dd from the string
 					unityear = begintimesplit[0].substring(0,4);
 					unitmonth = begintimesplit[0].substring(4,6);
 					unitday = begintimesplit[0].substring(6,8);
 					var tabledate =  new moment(unityear+"-"+unitmonth+"-"+unitday);
-					
 					// now to get the day of the week this date was on
 					var weekday = tabledate.day();
-	
 					// function to get the times between the beginning and end
 					var timediff = endtime - begintime;
-					tabletemplate = between(timediff,begintime,currevent,weekday,tabletemplate);
-					console.log(tabletemplate);
-
-					console.log("----")
-					
-
+					templateinstance = between(timediff,begintime,currevent,weekday,templateinstance);
 				} 
 			 }
 
-			console.log("!!!!!!!!!!!!!!!!!!!!!!");
 
-
-	
-	
-	
+			return templateinstance;
 	
 	};
 	
-	var between = function(timediff,begintime,currevent,weekday,tabletemplate){
-		console.log("INSIDE BETWEEN!!!!!");
-		//var x = new Array();
+	
+	var between = function(timediff,begintime,currevent,weekday,templateinstance){
 		
 		for(var i=0; i<= timediff; i++){
-				console.log(i + begintime);
-				tabletemplate[i +begintime].hour = i+begintime;
+				templateinstance[i +begintime].hour = i+begintime;
 
 					if(weekday ==1){
-						tabletemplate[i +begintime].mon = currevent;
+						templateinstance[i +begintime].mon = currevent;
 
 						}
 					else if(weekday ==2){
-						tabletemplate[i +begintime].tues = currevent;
+						templateinstance[i +begintime].tues = currevent;
 					}
 					else if(weekday ==3){
-						tabletemplate[i +begintime].wed = currevent;
+						templateinstance[i +begintime].wed = currevent;
 					}
 					else if(weekday ==4){
-						tabletemplate[i +begintime].thurs = currevent;
+						templateinstance[i +begintime].thurs = currevent;
 					}
 					else if(weekday ==5){
-						tabletemplate[i +begintime].fri = currevent;
+						templateinstance[i +begintime].fri = currevent;
 					}
 		}
 		
-		return tabletemplate;
-		
-	
+		return templateinstance;
 	
 	
 	}
