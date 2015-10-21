@@ -49,9 +49,60 @@ if(fileurl == "" || !fileurl )
 		} else{ // begin comparing the current table with the new table
 			console.log(fileurl);
 			console.log("THERE IS A TABLE HERE");
-			console.log(JSON.stringify(currenttable[13]));
-			$scope.times = timetable;
+		//	console.log(JSON.stringify(currenttable[13]));
+		//	$scope.times = timetable;
 		
+			for(var i=0; i<currenttable.length; i++){
+			
+				
+				// if there is a spot empty and the new table has something to put in there
+				
+				if(currenttable[i].mon =='' && timetable[i].mon!=''){
+					currenttable[i].mon = timetable[i].mon;
+
+				} else if(currenttable[i].mon!='' && timetable[i].mon!=''){
+				
+					currenttable[i].mon = (currenttable[i].mon +"||"+ timetable[i].mon);
+				
+				}
+				if(currenttable[i].tues =='' && timetable[i].tues!=''){
+					currenttable[i].tues = timetable[i].tues;
+
+				} else if(currenttable[i].tues!='' && timetable[i].tues!=''){
+				
+					currenttable[i].tues = (currenttable[i].tues +"||"+ timetable[i].tues);
+				
+				}				
+				if(currenttable[i].wed =='' && timetable[i].wed!=''){
+					currenttable[i].wed = timetable[i].wed;
+
+				} else if(currenttable[i].wed!='' && timetable[i].wed!=''){
+				
+					currenttable[i].wed = (currenttable[i].wed +"||"+ timetable[i].wed);
+				
+				}						
+				if(currenttable[i].thurs =='' && timetable[i].thurs!=''){
+					currenttable[i].thurs = timetable[i].thurs;
+
+				} else if(currenttable[i].thurs!='' && timetable[i].thurs!=''){
+				
+					currenttable[i].thurs = (currenttable[i].thurs +"||"+ timetable[i].thurs);
+				
+				}	
+				if(currenttable[i].fri =='' && timetable[i].fri!=''){
+					currenttable[i].fri = timetable[i].fri;
+
+				} else if(currenttable[i].fri!='' && timetable[i].fri!=''){
+				
+					currenttable[i].fri = (currenttable[i].fri +"||"+ timetable[i].fri);
+				
+				}					
+			
+			}
+			// this updates the timetable;
+			$scope.times = currenttable;
+		
+			
 		
 		
 		}
