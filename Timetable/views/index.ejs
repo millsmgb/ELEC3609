@@ -29,9 +29,6 @@
 
 	</div>
 
-	
-	<h1> Personal Timetable </h1>
-	    <p>    Click <a ng-click="loadtimes()">here</a> to load data from set 1.</p>
 
 
 	<table class = "table table-bordered ">
@@ -48,11 +45,11 @@
     </tr>
     <tr ng-repeat="time in times"  ng-if="time.hour >= 8">
         <td>{{time.hour}}</td>
-        <td ng-style="set_color(time)">{{time.mon}}</td>
-        <td ng-style="set_color(time)">{{time.tues}}</td>
-		<td ng-style="set_color(time)">{{time.wed}}</td>
-        <td ng-style="set_color(time)">{{time.thurs}}</td>
-        <td ng-style="set_color(time)">{{time.fri}}</td>
+        <td ng-style="set_color(time.mon)">{{time.mon}}</td>
+        <td ng-style="set_color(time.tues)">{{time.tues}}</td>
+		<td ng-style="set_color(time.wed)">{{time.wed}}</td>
+        <td ng-style="set_color(time.thurs)">{{time.thurs}}</td>
+        <td ng-style="set_color(time.fri)">{{time.fri}}</td>
     </tr>
 	
 </table>

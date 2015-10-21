@@ -62,7 +62,7 @@ if(fileurl == "" || !fileurl )
 
 				} else if(currenttable[i].mon!='' && timetable[i].mon!=''){
 				
-					currenttable[i].mon = (currenttable[i].mon +"||"+ timetable[i].mon);
+					currenttable[i].mon = (currenttable[i].mon +" || "+ timetable[i].mon);
 				
 				}
 				if(currenttable[i].tues =='' && timetable[i].tues!=''){
@@ -70,7 +70,7 @@ if(fileurl == "" || !fileurl )
 
 				} else if(currenttable[i].tues!='' && timetable[i].tues!=''){
 				
-					currenttable[i].tues = (currenttable[i].tues +"||"+ timetable[i].tues);
+					currenttable[i].tues = (currenttable[i].tues +" || "+ timetable[i].tues);
 				
 				}				
 				if(currenttable[i].wed =='' && timetable[i].wed!=''){
@@ -78,7 +78,7 @@ if(fileurl == "" || !fileurl )
 
 				} else if(currenttable[i].wed!='' && timetable[i].wed!=''){
 				
-					currenttable[i].wed = (currenttable[i].wed +"||"+ timetable[i].wed);
+					currenttable[i].wed = (currenttable[i].wed +" || "+ timetable[i].wed);
 				
 				}						
 				if(currenttable[i].thurs =='' && timetable[i].thurs!=''){
@@ -86,7 +86,7 @@ if(fileurl == "" || !fileurl )
 
 				} else if(currenttable[i].thurs!='' && timetable[i].thurs!=''){
 				
-					currenttable[i].thurs = (currenttable[i].thurs +"||"+ timetable[i].thurs);
+					currenttable[i].thurs = (currenttable[i].thurs +" || "+ timetable[i].thurs);
 				
 				}	
 				if(currenttable[i].fri =='' && timetable[i].fri!=''){
@@ -94,7 +94,7 @@ if(fileurl == "" || !fileurl )
 
 				} else if(currenttable[i].fri!='' && timetable[i].fri!=''){
 				
-					currenttable[i].fri = (currenttable[i].fri +"||"+ timetable[i].fri);
+					currenttable[i].fri = (currenttable[i].fri +" || "+ timetable[i].fri);
 				
 				}					
 			
@@ -123,35 +123,15 @@ if(fileurl == "" || !fileurl )
 $scope.set_color = function(time){
 	// check if the field contains the || symbol showing there is a clash
 	
-	var str =  time.mon;
+	var str =  time;
 	if(str.indexOf('||') !== -1)
-		return { color: "red" };
-	str = time.tues;
-	if(str.indexOf('||') !== -1)
-		return { color: "red" };
-	str = time.wed;
-	if(str.indexOf('||') !== -1)
-		return { color: "red" };
-	str = time.thurs;
-	if(str.indexOf('||') !== -1)
-		return { color: "red" };
-	str = time.fri;
-	if(str.indexOf('||') !== -1)
-		return { color: "red" };
+		return { 'background-color': "red",
+				'color': "white"
+				};
+
 
 }
 
-$scope.loadtimes = function(){
- h1 = {hour: 9, mon: "comp lecture", tues: "", wed: "", thurs: "", fri:" "};
- h2 = {hour: 10, mon: "comp lecture", tues: "elec lecture", wed: "", thurs: "", fri:" "};
- h3 = {hour: 11, mon: "", tues: "elec lecture", wed: "", thurs: "", fri:" comp tutorial"};
- h4 = {hour: 12, mon: "", tues: "", wed: "", thurs: "", fri:" comp tutorial"};
-
- var examplejson1 = [h1,h2,h3,h4];
-
- //$scope.times = examplejson1;
-
-}
 
 
 
