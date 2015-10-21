@@ -120,6 +120,26 @@ if(fileurl == "" || !fileurl )
 		
 };
 
+$scope.set_color = function(time){
+	// check if the field contains the || symbol showing there is a clash
+	
+	var str =  time.mon;
+	if(str.indexOf('||') !== -1)
+		return { color: "red" };
+	str = time.tues;
+	if(str.indexOf('||') !== -1)
+		return { color: "red" };
+	str = time.wed;
+	if(str.indexOf('||') !== -1)
+		return { color: "red" };
+	str = time.thurs;
+	if(str.indexOf('||') !== -1)
+		return { color: "red" };
+	str = time.fri;
+	if(str.indexOf('||') !== -1)
+		return { color: "red" };
+
+}
 
 $scope.loadtimes = function(){
  h1 = {hour: 9, mon: "comp lecture", tues: "", wed: "", thurs: "", fri:" "};
