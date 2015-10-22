@@ -1,26 +1,26 @@
+<form class="form-horizontal">
+    <fieldset>
+        <legend>Upload new Timetable</legend>
+        <div class="form-group">
+            <label for="inputURL" class="col-lg-2 control-label">Upload via URL</label>
+            <div class="col-lg-10">
+                    <input = "text" ng-model = "icalurl.txt" > </input>
+            </div>
+            <br>
+            <h3 style="text-align: center; color: black">OR</h3>
+            <label class="col-lg-2 control-label">Upload from File</label>
+            <div class="col-lg-10">
+                <input id="input-ics" type="file" multiple="false" class="file-loading">
+                <p class="help-block">Upload ICS formatted timetable</p>
+            </div>                            
+        </div>
+        
+    <button type="submit" class="btn btn-default" ng-click = "processical(icalurl.txt)">Submit</button>
+    </fieldset> 
 
-
-
-
-                <form class="form-horizontal">
-                    <fieldset>
-                        <legend>Upload new Timetable</legend>
-                        <div class="form-group">
-                            <label for="inputURL" class="col-lg-2 control-label">Upload via URL</label>
-                            <div class="col-lg-10">
-                               
-                                    <input = "text" ng-model = "icalurl.txt" > </input>
-
-                            </div>
-                            <br>
-                            <h3 style="text-align: center" >OR</h3>
-                            <label class="col-lg-2 control-label">Upload from File</label>
-                            <div class="col-lg-10">
-                                <input id="input-ics" type="file" multiple="false" class="file-loading">
-                                <p class="help-block">Upload ICS formatted timetable</p>
-                            </div>                            
-                        </div>
-                        
-<button type="submit" class="btn btn-default" ng-click = "processical(icalurl.txt)">Submit</button>
-                    </fieldset> 
-                </form>
+    <style>
+        .form-horizontal {
+            margin: 100px;
+        }
+    </style>
+</form>

@@ -12,61 +12,60 @@
         <div class="site-wrapper">
             <!-- NavBar class used when the user is logged in -->        
             <div class="navbar navbar-inverse" style="background-color: #239a55">
-                <ul class="nav navbar-nav">
-                    <li><h3>Timetable Management System</h3></li>
+                <ul class="nav navbar-nav navbar-left">
+                    <div class="navbar-brand">Timetable Management System</div>
                     <li><a href="#/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-                    <li><a href="#groups"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Groups Tab</a></li>
-                    <li><a href="#upload"><span aria-hidden="true"></span> Upload Tab</a></li>
+                    <li><a href="#groups"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Group Timetable</a></li>
+                    <li><a href="#upload"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload Timetable</a></li>
                 </ul>
+
                 <ul class="nav navbar-nav navbar-right">
-                    <li><form class="navbar-form navbar-left">
-                        <input type="text" class="form-control col-lg-8" placeholder="Search">
+                <li><form class="navbar-form navbar-left">
+                    <input type="text" class="form-control col-lg-8" placeholder="Search">
                     </form></li>
-                    <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li> 
+                    <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>
                 </ul>
-            </div> 
-	   </div>
+            </div>		
 		
-		
-    	<div class = "outerborder">
-    		<ng-view> </ng-view>
-    	</div>
+        	<div class = "outerborder">
+        		<ng-view> </ng-view>
+        	</div>
 
-        <div class="container">
-            <div id="currentTimetable">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Your current group Timetable</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class = "outerborder">
+            <div class="container">
+                <div id="currentTimetable">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
                         </div>
+                        <div class="panel-body">
+                            <div class = "outerborder">
+                            </div>
 
-                        <table class = "table table-bordered ">
-                            <tr>
-                                <th>Hour </th>
-                                <th>MON </th>
-                                <th>TUES </th>
-                                <th>WED </th>
-                                <th>THURS </th>
-                                <th>FRI </th>
+                            <table class = "table table-bordered ">
+                                <tr>
+                                    <th>Hour </th>
+                                    <th>MON </th>
+                                    <th>TUES </th>
+                                    <th>WED </th>
+                                    <th>THURS </th>
+                                    <th>FRI </th>
 
 
 
-                            </tr>
-                            <tr ng-repeat="time in times"  ng-if="time.hour >= 8">
-                                <td>{{time.hour}}</td>
-                                <td ng-style="set_color(time.mon)">{{time.mon}}</td>
-                                <td ng-style="set_color(time.tues)">{{time.tues}}</td>
-                                <td ng-style="set_color(time.wed)">{{time.wed}}</td>
-                                <td ng-style="set_color(time.thurs)">{{time.thurs}}</td>
-                                <td ng-style="set_color(time.fri)">{{time.fri}}</td>
-                            </tr>                    
-                        </table>
+                                </tr>
+                                <tr ng-repeat="time in times"  ng-if="time.hour >= 8">
+                                    <td>{{time.hour}}</td>
+                                    <td ng-style="set_color(time.mon)">{{time.mon}}</td>
+                                    <td ng-style="set_color(time.tues)">{{time.tues}}</td>
+                                    <td ng-style="set_color(time.wed)">{{time.wed}}</td>
+                                    <td ng-style="set_color(time.thurs)">{{time.thurs}}</td>
+                                    <td ng-style="set_color(time.fri)">{{time.fri}}</td>
+                                </tr>                    
+                            </table>
+                        </div>
                     </div>
                 </div>
+                <br>
             </div>
-            <br>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
@@ -90,8 +89,7 @@
         }
         h3{
             color:white;
-            margin-top:2rem;
-            
+            margin-top:2rem;  
         }
         .outerborder{
             margin-left:50px;
