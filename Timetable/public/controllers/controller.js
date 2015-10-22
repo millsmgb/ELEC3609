@@ -19,6 +19,7 @@ var myApp = angular.module('myApp', ['ngRoute'])
 myApp.controller('AppCtrl', ['$scope', '$http','$location','$rootScope', function($scope, $http, $location,$rootScope) {
 
 
+$scope.icalurl = {};
 
 
 $scope.processical = function(fileurl){
@@ -31,6 +32,7 @@ if(fileurl == "" || !fileurl )
 	var timetable;
 	console.log(file);
 	
+	$scope.icalurl.txt = '';
 	// this gets back the json table from the server.
 	$http.post('/icaldl',file).success(function(response){ // ask server through this route
 	

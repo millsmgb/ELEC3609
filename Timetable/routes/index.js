@@ -8,6 +8,12 @@ var Timetable  = require('../models/timetable');
 var moment = require('moment');
 var hour = require('../models/hour');
 
+
+	app.use(function(req, res, next) {
+        res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+    next();
+	});
+
 moment().format();
 	// =====================================
 	// HOME PAGE (with login links) ========
@@ -102,8 +108,6 @@ function isLoggedIn(req, res, next) {
 			console.log("INSIDE TIMEOUT")
 			var returnable = createjsontable();
 		// return the filled out timetable in json format
-			console.log(returnable);
-			console.log("@@@@@@@@@@@@@@@@@@@@")
 			res.json(JSON.stringify(returnable));
 		//	res.json();
 
