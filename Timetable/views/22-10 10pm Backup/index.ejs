@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+-->
+<html ng-app ="myApp" ng-controller="AppCtrl">
+    <head>
+        <title>TimeSharing Calender</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/borderless.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <script src="../js/jquery.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        
+        <div class="site-wrapper">
+            <!-- NavBar class used when the user is logged in -->        
+            <div class="navbar navbar-inverse" style="background-color: #239a55">
+
+
+                <ul class="nav navbar-nav">
+                    <li><h3>Timetable Management System</h3></li>
+			
+                    <li><a href="#/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+                    <li><a href="#groups"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Groups Tab</a></li>
+                    <li><a href="#upload"><span aria-hidden="true"></span> Upload Tab</a></li>
+                </ul>
+    <!--            <a class="navbar-brand"><img src="../img/calenderMenu.png" alt=""/></a>-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><form class="navbar-form navbar-left">
+                        <input type="text" class="form-control col-lg-8" placeholder="Search">
+                    </form></li>
+                    <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li> 
+                </ul>
+            </div>
+            
+
+	</div>
+		
+		
+	<div class = "outerborder">
+		<ng-view> </ng-view>
+
+	</div>
+
+
+
+            <div class="container">
+                
+                <div id="currentTimetable">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Your current group Timetable</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class = "outerborder">
+      
+    </div>
+
+
+
+
+
+    <table class = "table table-bordered ">
+    <tr>
+        <th>Hour </th>
+        <th>MON </th>
+        <th>TUES </th>
+        <th>WED </th>
+        <th>THURS </th>
+        <th>FRI </th>
+
+
+
+    </tr>
+    <tr ng-repeat="time in times"  ng-if="time.hour >= 8">
+        <td>{{time.hour}}</td>
+        <td ng-style="set_color(time.mon)">{{time.mon}}</td>
+        <td ng-style="set_color(time.tues)">{{time.tues}}</td>
+        <td ng-style="set_color(time.wed)">{{time.wed}}</td>
+        <td ng-style="set_color(time.thurs)">{{time.thurs}}</td>
+        <td ng-style="set_color(time.fri)">{{time.fri}}</td>
+    </tr>
+    
+</table>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br>
+            </div>
+            
+        </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script>
+    <script src="controllers/controller.js"></script>
+
+    </body>
+    
+    <style>
+        #scaledImages {
+            max-height: 100%;
+            max-width: 100%;
+        }
+        .form-horizontal {
+            border: solid;
+            border-color: #2ECC71;
+            border-radius: 6px;
+            padding: 20px;
+        }
+        h3{
+            color:white;
+            margin-top:2rem;
+            
+        }
+    </style>
+</html>
