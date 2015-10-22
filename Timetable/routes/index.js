@@ -71,6 +71,11 @@ moment().format();
 		res.render('authwall.ejs');
 	});
 	
+	app.get('/retrieve', function(req, res) {
+
+		// render the page and pass in any flash data if it exists
+		res.render('retrieve.ejs');
+	});
 	
 // route middleware to make sure
 function isLoggedIn(req, res, next) {
