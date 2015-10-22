@@ -47,6 +47,8 @@ moment().format();
 	// process the login form
 	app.post('/login', passport.authenticate('local-login', {
 		successRedirect : '/index', // redirect to the secure profile section
+
+
 		failureRedirect : '/login', // redirect back to the signup page if there is an error
 		failureFlash : true // allow flash messages
 	}));
@@ -64,17 +66,24 @@ moment().format();
 	// process the signup form
 	app.post('/signup', passport.authenticate('local-signup', {
 		successRedirect : '/login', // redirect to the secure profile section
+		
 		failureRedirect : '/signup', // redirect back to the signup page if there is an error
 		failureFlash : true // allow flash messages
 	}));
 
+	app.post('/signupauth', passport.authenticate('local-signup', {
+		successRedirect : '/login', // redirect to the secure profile section
+		
+		failureRedirect : '/', // redirect back to the signup page if there is an error
+		failureFlash : true // allow flash messages
+	}));
 
 	// =====================================
 	// LOGOUT ==============================
 	// =====================================
 	app.get('/logout', function(req, res) {
 		req.logout();
-		res.render('authwall.ejs');
+		res.render('authwall.ejs',  { message: req.flash('signupMessage') });
 	});
 	
 	app.get('/retrieve', function(req, res) {
@@ -91,9 +100,8 @@ function isLoggedIn(req, res, next) {
 		return next();
 
 	// if they aren't redirect them to the home page
-	res.render('authwall.ejs');
+	res.render('authwall.ejs',  { message: req.flash('signupMessage') });
 }
-
 
 	
 	// HERE GOES THE TIMETABLE FUNCTIONS
