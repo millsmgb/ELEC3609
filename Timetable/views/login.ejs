@@ -12,47 +12,51 @@
     <body>
         <div class="site-wrapper">
             <div class="container">
-                
+                    
                 <!-- Navigation Bar container -->
                 <div class="navbar navbar-inverse" style="background-color: #419641">
                     <a class="navbar-brand">Timetable Sharing</a>
                     <div class="navbar-collapse collapse navbar-responsive-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="/">Home</a></li>
-                            <li><a href="/signup">Sign up</a></li>
+                            <li><a href="login">Log In <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a></li>
+                            <li><a href="signup"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span> Sign up</a></li>
                         </ul>
                     </div>
                 </div>
-                
-                <!-- Register box container -->
+                    
+                <!-- log in box container -->
                 <div id="login-box">
                     <h1><span class="fa fa-sign-in"></span> Login</h1>
+                    <!-- show any messages that come back with authentication -->
+                    <% if (message.length > 0) { %>
+                        <div class="alert alert-danger"><%= message %></div>
+                    <% } %>
 
-    <!-- show any messages that come back with authentication -->
-    <% if (message.length > 0) { %>
-        <div class="alert alert-danger"><%= message %></div>
-    <% } %>
-
-
-    <!-- LOGIN FORM -->
-    <form action="/login" method="post">
-        <div class="form-group">
-            <label>Email</label>
-            <input type="text" class="form-control" name="email">
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" name="password">
-        </div>
-
-        <button type="submit" class="btn btn-warning btn-lg">Login</button>
-    </form>
-
-
-    <p>Need an account? <a href="/signup">Signup</a></p>
-    <p>Or go <a href="/">home</a>.</p>
-    
+                    <!-- LOGIN FORM -->
+                    <form action="/login" method="post">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" name="password">
+                        </div>
+                        <hr>
+                        <div class="span7 text-center">
+                            <div class="btn-group">
+                                <a href="/" class="btn btn-default btn-lg">Cancel</a>
+                                <button type="submit" class="btn btn-warning btn-lg">Login</button>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="span7 text-center">
+                            <a href="retrieve" class="btn btn-info">Forgot your Information?</a>
+                        </div>
+                    </form>
                 </div>
+
             </div>
         </div>
         
@@ -70,16 +74,6 @@
             border-radius: 6px;
             padding: 48px 90px;
             margin: 100px 150px;
-        }
-        #centre-img{
-            display: block;
-            margin: auto;
-            margin-bottom: 20px;
-        }
-        #log-buttons {
-            float: right;
-            position: relative;
-            left: -22%;
         }
     </style>
 </html>

@@ -22,9 +22,9 @@
                     <a class="navbar-brand">Timetable Sharing</a>
                     <div class="navbar-collapse collapse navbar-responsive-collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/">Home</a></li>                            
-                            <li><a href="/login">Log In</a></li>
-                            <li><a href="/signup">Sign Up</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="login">Log In <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a></li>
+                            <li><a href="signup"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span> Sign up</a></li>
                         </ul>
                     </div>
                 </div>
@@ -48,21 +48,27 @@
                                             <input type="text" class="form-control" id="inputEmail" placeholder="Email">
                                         </div>
                                     </div> 
-
-                                    <div class="form-group" id="retrevie-buttons">
-                                        <a href="guestPage.html"  class="btn btn-default">Cancel</a>
-                                        <a type="submit" class="btn btn-primary" onclick="emailSent()">Retrieve Account</a>
-                                        <br>
-                                        <a href="registerPage.html" class="btn btn-default" style="margin-top: 5px">Register Account</a>
+                                    <br>
+                                    <div class="span7 text-center">
+                                        <div class="btn-group">
+                                            <a href="/"  class="btn btn-default">Cancel</a>
+                                            <a type="submit" class="btn btn-primary" onclick="emailSent()">Retrieve Account</a>
+                                            <br>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="span7 text-center">
+                                        <a href="signup" class="btn btn-default">Create new account</a>
                                     </div>
                                 </div>
+                                        
                             <div id="confirmationBox">
                                 <script>$(confirmationBox).hide();</script>
                                 <h3>A retrieval email has been sent</h3>
                                 <p>please check your email in a few minutes</p>
                                 
-                                <div class="form-group" id="confirmedBtn">
-                                        <a href="guestPage.html"  class="btn btn-default">Ok</a>
+                                <div class="span7 text-center">
+                                        <a href="/"  class="btn btn-default">Ok</a>
                                 </div>
                             </div> 
                         </fieldset>
@@ -88,19 +94,6 @@
             border-radius: 6px;
             padding: 48px 90px;
             margin: 100px 150px;
-        }
-        #retrevie-buttons {
-            float: right;
-            position: relative;
-            left: -30%;
-            padding-top: 50px;
-        }
-        
-        #confirmedBtn {
-            float: right;
-            position: relative;
-            left: -50%;
-            padding-top: 50px;
         }
     </style>
 </html>
