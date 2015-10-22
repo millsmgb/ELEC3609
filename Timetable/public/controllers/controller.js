@@ -18,9 +18,7 @@ var myApp = angular.module('myApp', ['ngRoute'])
 
 myApp.controller('AppCtrl', ['$scope', '$http','$location','$rootScope', function($scope, $http, $location,$rootScope) {
 
-
 $scope.icalurl = {};
-
 
 $scope.processical = function(fileurl){
 // do not do anything if the directory is blank
