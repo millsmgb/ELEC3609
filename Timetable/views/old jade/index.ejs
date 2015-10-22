@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app ="myApp" ng-controller="AppCtrl">
+
+<head>
+
+
+    <title>Timetable Management System</title>	
+	
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="navbar topbar">
+
+	    <h1 id="title"> Timetable Management System </h1> 
+			<a href ="#groups"> groups tab    </a>
+			<a href ="#upload">    upload tab </a>
+			<a href ="/logout">    sign out </a>
+
+
+	</div>
+		
+		
+	<div class = "outerborder">
+		<ng-view> </ng-view>
+
+	</div>
+
+
+
+	<table class = "table table-bordered ">
+    <tr>
+        <th>Hour </th>
+        <th>MON </th>
+        <th>TUES </th>
+        <th>WED </th>
+        <th>THURS </th>
+        <th>FRI </th>
+
+
+
+    </tr>
+    <tr ng-repeat="time in times"  ng-if="time.hour >= 8">
+        <td>{{time.hour}}</td>
+        <td ng-style="set_color(time.mon)">{{time.mon}}</td>
+        <td ng-style="set_color(time.tues)">{{time.tues}}</td>
+		<td ng-style="set_color(time.wed)">{{time.wed}}</td>
+        <td ng-style="set_color(time.thurs)">{{time.thurs}}</td>
+        <td ng-style="set_color(time.fri)">{{time.fri}}</td>
+    </tr>
+	
+</table>
+
+	    
+	<!-- angular related -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.js"></script>
+	<script src="controllers/controller.js"></script>
+
+
+
+</body>
+
+</html>
