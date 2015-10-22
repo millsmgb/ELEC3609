@@ -37,7 +37,26 @@
                             </div>                            
                             <div class="col-lg-5" style="padding-bottom: 15px">
                                 <h2>Register and start today!</h2>
-                                <a href="/signup" class="btn btn-large btn-primary"><span class="fa fa-user"></span>Signup</a>
+
+     <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>                               
+
+
+    <!-- LOGIN FORM -->
+    <form action="/signupauth" method="post">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-large btn-primary">Signup</button>
+    </form>
+                               
                                 <a href="/login" class="btn btn-large btn-default"><span class="fa fa-user"></span>Login</a>
                             </div>                            
                         </div>
