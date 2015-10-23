@@ -1,15 +1,12 @@
 {
-  "name": "Timetable",
+  "name": "timetable",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "description": "Timetable",
-  "author": {
-    "name": "Matthew",
-    "email": ""
-  },
+  "author": "Matthew",
   "dependencies": {
     "angular": "^1.4.6",
     "bcrypt-nodejs": "0.0.3",
@@ -30,5 +27,16 @@
     "passport-local": "^1.0.0",
     "serve-favicon": "^2.1.7",
     "stylus": "^0.42.3"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/millsmgb/ELEC3609.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/millsmgb/ELEC3609/issues"
+  },
+  "homepage": "https://github.com/millsmgb/ELEC3609#readme"
 }
