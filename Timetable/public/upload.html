@@ -10,7 +10,7 @@
             <h3 style="text-align: center; color: black">OR</h3>
             <label class="col-lg-2 control-label">Upload from File</label>
             <div class="col-lg-10">
-                <input id="input-ics" type="file" ng-model="icalurl.txt" accept=".ics"/>
+                <input id="input-ics" type="file" name="file" accept=".ics" onchange="angular.element(this).scope().uploadFile(this.files)"/>
                 <p class="help-block">Upload ICS formatted timetable</p>
             </div>                            
         </div>

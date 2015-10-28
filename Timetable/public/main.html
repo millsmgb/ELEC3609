@@ -1,6 +1,6 @@
 <div class="container">
     <!-- TODO: Implement MySQL into code -->
-    <h2>millsmgb@gmail.com</h2>
+    <h2> <div class="loggedinstatus"<strong>Hello</strong>: {{$scope.globaluser.user}}<br></div></h2>
     <div class="row">
         <div id="profilePicture" class="col-xs-6 col-sm-2">
             <div class="panel panel-default">
@@ -10,7 +10,7 @@
                 <div class="panel-body">
                   <img class="profileImg" id="scaledImages" src="../img/userPortrait.png" alt=""/>
                 </div>
-
+                       
             </div>
             <a href="#/" class="btn btn-small btn-square btn-default">Change Profile Picture</a>
         </div>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-xs-6">
                             <ul style="list-style-type:none">
-                                <li>millsmgb@gmail.com</li>
+                                <li> <div class="loggedinstatus" <%= user.local.email %><br></div></li>
                                 <br>
                                 <li>Matthew Mills</li>
                                 <li>University of Sydney</li>
@@ -61,3 +61,10 @@
     </div>
     <br>
 </div>
+
+<script>
+    $(document).ready(function() {
+        var username = {{$scope.globaluser.user}};
+        printf(username);
+    });
+</script>

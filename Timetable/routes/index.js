@@ -122,6 +122,13 @@ function isLoggedIn(req, res, next) {
 		}, 2500);
 
 	});
+
+	app.post('/icalfile', function(req,res,next){
+	setTimeout(function() {
+		var returnable = createjsontable();
+		res.json(JSON.stringify(returnablee));
+	},2500);
+});
 	
 
 	var createjsontable = function(){

@@ -1,4 +1,4 @@
-<html ng-app ="myApp" ng-controller="AppCtrl">
+<html ng-app ="myApp" ng-controller="AppCtrl" ng-init ="initial('<%= user.local.email %>')">
     <head>
         <title>TimeSharing Calender</title>
         <meta charset="UTF-8">
@@ -17,6 +17,7 @@
                     <li><a href="#/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
                     <li><a href="#groups"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Group Timetable</a></li>
                     <li><a href="#upload"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload Timetable</a></li>
+                     <div class="loggedinstatus"<strong>Hello</strong>: <%= user.local.email %><br></div>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
