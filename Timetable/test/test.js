@@ -24,8 +24,23 @@ describe('Cannot GET', function() {
 
   });
 });
+describe('Signup', function(){
+ 
+  it('Sign up successfully', function(done) {
+    user1
+      .post('http://localhost:3000/signupauth')
+      //using login already added on my local DB
+      .send({ email: 'newuser', password: 'sarahishot' })
+      .end(function(err, res) {
+        res.redirects.should.eql(['http://localhost:3000/login']);
+        expect(res.status).to.equal(200);
+        done();
+      })
+;
 
 
+});
+});
 describe('Login', function() {
   
   it('Redirect to index after login', function(done) {
@@ -95,73 +110,4 @@ describe('homepage', function(){
   });
 });
   
-describe('comments', function(){
-  //login so we can actually post comments
-
-  it('Respond to comment post to /create3DUserInterface',function(done){
-       user1
-
-        .post('http://localhost:3000/login')
-        .send({ email: 'hello@hi.com', password: 'hello' })
-        .end(function(err, res){
-             res.redirects.should.eql(['http://localhost:3000/index']);
-
-             user1
-              .get('http://localhost:3000/')
-              .end(function(err,res){
-
-  
-              user1
-
-                .get('http://localhost:3000/postsrouter')
-                .end(function(err, res){
-
-                      user1
-                        //posting comment on specific page, can check on local website
-                        .post('http://localhost:3000/postsrouter')
-                        .send({comment: 'hello', upvotes: 0 , author: 'hello@hi.com' , location: '/create3DUserInterface'})
-                        .end(function(err, res){
-                           expect(res.status).to.equal(200);
-                          done();
-                        });
-                });
-              });
-          });
-
-  });
-
-  it('Successfully remove comment from id taken from DB',function(done){
-     user1
-      //login first
-        .post('http://localhost:3000/login')
-        .send({ email: 'hello@hi.com', password: 'hello' })
-        .end(function(err, res){
-             res.redirects.should.eql(['http://localhost:3000/index']);
-
-             user1
-              .get('http://localhost:3000/')
-              .end(function(err,res){
-
-  
-              user1
-
-                .get('http://localhost:3000/postsrouter')
-                .end(function(err, res){
-
-                      user1
-                        //delete comment, place ID from mongo: use easy, db.posts.find(), grab any ObjectId and paste into postsrouter/x
-                        .del('http://localhost:3000/postsrouter/56243b4315f8c7801de3f3e0')
-
-                        .end(function(err, res){
-                          //200 if correct
-                          expect(res.status).to.equal(200);
-                          done();
-                        });
-                });
-              });
-          });
-
-  });
-
-});
 
