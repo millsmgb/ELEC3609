@@ -13,7 +13,7 @@ var user1 = superagent.agent();
 
 
 
-describe('Response Time for splash/homepage', function(){
+describe('Acceptable Response Time Test', function(){
  // beforeEach(module('myApp'));
 
   it('Respond to first GET within 100ms',function(done){
@@ -28,10 +28,25 @@ describe('Response Time for splash/homepage', function(){
 });
 
 
+describe('Initial GET test', function(){
+ // beforeEach(module('myApp'));
+
+  it('should successfully access the web app',function(done){
+
+    superagent
+      .get('http://localhost:3000')
+      .end(function(err, res){
+        expect(res.status).to.equal(200);
+        done();
+    });
+  });
+});
 
 
 
-describe('Bad Link', function() {
+
+
+describe('Accessing 404 Pages', function() {
   
   it('Should give 404 on a bad link', function(done) {
     superagent
@@ -46,13 +61,13 @@ describe('Bad Link', function() {
 });
 
 
-describe('Signup', function(){
+describe('Signup Test', function(){
  
   it('User signs up successfully', function(done) {
     user1
       .post('http://localhost:3000/signupauth')
       //using login already added on my local DB
-      .send({ email: 'newuser', password: 'newpass' })
+      .send({ email: 'newuser3', password: 'newpass' })
       .end(function(err, res) {
         res.redirects.should.eql(['http://localhost:3000/login']);
         expect(res.status).to.equal(200);
@@ -68,7 +83,7 @@ describe('Signup', function(){
 
 
 
-describe('Login', function() {
+describe('Successful Login', function() {
   
   it('Redirect to index after login', function(done) {
     user1
@@ -99,7 +114,7 @@ describe('Login', function() {
   });
 });
 
-describe('Logout', function(){
+describe('Successful Logout', function(){
 
  // beforeEach(module('myApp'));
 before(function() {
