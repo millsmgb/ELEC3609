@@ -11,7 +11,27 @@ var app = express();
 var user1 = superagent.agent();
 
 
-describe('Cannot GET', function() {
+
+
+describe('Response Time for splash/homepage', function(){
+ // beforeEach(module('myApp'));
+
+  it('Respond to first GET within 100ms',function(done){
+    this.timeout(100);
+    superagent
+      .get('http://localhost:3000')
+      .end(function(err, res){
+        expect(res.status).to.equal(200);
+        done();
+    });
+  });
+});
+
+
+
+
+
+describe('Bad Link', function() {
   
   it('Should give 404 on a bad link', function(done) {
     superagent
@@ -24,23 +44,30 @@ describe('Cannot GET', function() {
 
   });
 });
+
+
 describe('Signup', function(){
  
-  it('Sign up successfully', function(done) {
+  it('User signs up successfully', function(done) {
     user1
       .post('http://localhost:3000/signupauth')
       //using login already added on my local DB
-      .send({ email: 'newuser', password: 'sarahishot' })
+      .send({ email: 'newuser', password: 'newpass' })
       .end(function(err, res) {
         res.redirects.should.eql(['http://localhost:3000/login']);
         expect(res.status).to.equal(200);
         done();
-      })
-;
+      });
 
 
 });
+
+
+
 });
+
+
+
 describe('Login', function() {
   
   it('Redirect to index after login', function(done) {
@@ -95,19 +122,31 @@ before(function() {
     });
   });
 });
-
-describe('homepage', function(){
- // beforeEach(module('myApp'));
-
-  it('Respond to GET',function(done){
-   
-    superagent
-      .get('http://localhost:3000')
-      .end(function(err, res){
-        expect(res.status).to.equal(200);
-        done();
-    });
-  });
-});
   
+/*
 
+describe('Timetable Post', function(){
+ 
+  it('Should post a timetable after logging in', function(done) {
+    user1
+      .post('http://localhost:3000/login')
+      //using login already added on my local DB
+      .send({ email: 'hello@hi.com', password: 'hello' })
+      .end(function(err, res) {
+        user1
+          .post('/icaldl')
+          .send({ 'icalurl.txt': 'https://www.timetable.usyd.edu.au/personaltimetable/timetable/calendar/312092938/4DKWirtoV3UpPpFRF90uCzAvjeKXvpL3eLjvi6XdXHZ/timetable.ics' })
+          .end(function(err, res) {
+                expect(res.status).to.equal(200);
+                done();
+
+          });
+      });
+});
+
+
+
+});
+
+
+*/
