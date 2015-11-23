@@ -1,5 +1,6 @@
 //https://www.timetable.usyd.edu.au/personaltimetable/timetable/calendar/430436262/iDXEYtIqEBi1XyyLc9GZi7gQosPFggDiBv9M9FS7zgI/timetable.ics
 //https://www.timetable.usyd.edu.au/personaltimetable/timetable/calendar/312092938/4DKWirtoV3UpPpFRF90uCzAvjeKXvpL3eLjvi6XdXHZ/timetable.ics
+//testing if this will bet my name as a contributor
 var myApp = angular.module('myApp', ['ngRoute'])
 	.config(['$routeProvider',function($routeProvider){
 
