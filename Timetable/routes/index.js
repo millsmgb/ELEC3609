@@ -129,30 +129,28 @@ function isLoggedIn(req, res, next) {
 		res.json(JSON.stringify(returnablee));
 	},2500);
 });
-	
+
+
+
 
 	var createjsontable = function(){
-	var tabletemplate = [		{"hour":"0", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"1", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"2", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"3", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"4", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"5", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"6", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"7", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"8", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"9", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"10", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"11", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"12", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"13", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"14", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"15", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"16", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"17", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"18", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""},
-								{"hour":"19", "mon": "", "tues": "", "wed": "", "thurs": "", "fri": ""}
-					];
+		
+		function tablesection (i){
+			this.hour = i;
+			this.mon = "";
+			this.tues = "";
+			this.wed = "";
+			this.thurs = "";
+			this.fri = "";
+		}
+
+	
+		var tabletemplate = [];
+		
+		for(var i = 0; i<19; i++){
+			tabletemplate[i] =  new tablesection(i);
+		};	
+		
 			console.log("about to create json file");
 			var fs = require('fs');
 			var jsontable;
